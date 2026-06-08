@@ -1,138 +1,127 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flirty Quiz Studio - Apps, Privacy Policies and Terms</title>
-  <meta name="description" content="Official developer page for Flirty Quiz Studio apps, including Block Buster Vortex and Ultimatum Share legal pages, privacy policies, terms and support information.">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Flirty Quiz Studio - Official Apps">
-  <meta property="og:description" content="Official app hub with privacy policies, terms of service and support links for Block Buster Vortex and Ultimatum Share.">
-  <meta property="og:type" content="website">
-  <style>
-    :root{
-      --bg:#060712;
-      --card:#11162a;
-      --card2:#171d35;
-      --text:#f4f7ff;
-      --muted:#b8c2dd;
-      --cyan:#26e6ff;
-      --magenta:#ff2fb3;
-      --gold:#ffd166;
-      --green:#32ff9a;
-      --border:rgba(255,255,255,.12);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,Arial,Helvetica,sans-serif;
-      color:var(--text);
-      line-height:1.6;
-      background:
-        radial-gradient(circle at 18% 10%, rgba(38,230,255,.18), transparent 30%),
-        radial-gradient(circle at 82% 22%, rgba(255,47,179,.16), transparent 30%),
-        linear-gradient(180deg,#050611,#080a18 56%,#04050d);
-    }
-    a{color:var(--cyan);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{width:min(1060px,92vw);margin:0 auto;padding:42px 0}
-    .hero{text-align:center;padding:50px 0 28px}
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      border:1px solid rgba(38,230,255,.42);
-      background:rgba(38,230,255,.08);
-      color:var(--cyan);
-      padding:8px 14px;
-      border-radius:999px;
-      font-weight:800;
-      font-size:13px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-    h1{font-size:clamp(38px,7vw,72px);line-height:.98;margin:22px 0 12px;letter-spacing:-.05em}
-    h2{font-size:clamp(24px,3vw,34px);margin:0 0 14px}
-    p{color:var(--muted);margin:0 0 14px}
-    .lead{font-size:clamp(17px,2.1vw,21px);max-width:820px;margin:0 auto;color:#dce6ff}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:30px 0}
-    .card{
-      background:linear-gradient(180deg,rgba(23,29,53,.92),rgba(11,15,31,.92));
-      border:1px solid var(--border);
-      border-radius:26px;
-      padding:24px;
-      box-shadow:0 18px 60px rgba(0,0,0,.28);
-    }
-    .app-title{display:flex;align-items:center;gap:12px;margin-bottom:8px}
-    .icon{font-size:34px;line-height:1}
-    .app-title strong{display:block;color:#fff;font-size:22px;line-height:1.15}
-    .tag{color:var(--gold);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
-    .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-    .btn{
-      display:inline-block;
-      padding:11px 14px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.15);
-      background:rgba(38,230,255,.14);
-      font-weight:900;
-      color:#fff;
-      font-size:14px;
-    }
-    .btn.alt{background:rgba(255,47,179,.12)}
-    .btn.gold{background:rgba(255,209,102,.13)}
-    .info{margin-top:28px}
-    .kv{display:grid;grid-template-columns:190px 1fr;gap:8px;color:var(--muted);margin:4px 0}
-    .kv strong{color:#fff}
-    .footer{margin-top:38px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:14px;text-align:center}
-    @media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:32px}.kv{grid-template-columns:1fr}}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flirty Quiz Studio - Official App Hub</title>
+  <meta name="description" content="Official developer hub for Flirty Quiz Studio Android apps: privacy policies, terms of service, Google Play links, support information and app-ads.txt." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#101322" />
+  <meta property="og:title" content="Flirty Quiz Studio - Official Android Apps" />
+  <meta property="og:description" content="Privacy policies, terms of service and support links for Android apps by Flirty Quiz Studio." />
+  <meta property="og:type" content="website" />
+  <style>:root{--bg:#070812;--text:#f7f8ff;--muted:#b9c1da;--line:rgba(255,255,255,.14);--panel:rgba(255,255,255,.075);--panel2:rgba(255,255,255,.105);--cyan:#43e8ff;--pink:#ff5fa8;--gold:#ffd166;--green:#70ffb2;--violet:#b7a1ff;--shadow:0 24px 80px rgba(0,0,0,.42);--radius:28px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.62;background:radial-gradient(circle at 13% 8%,rgba(255,95,168,.24),transparent 30%),radial-gradient(circle at 85% 2%,rgba(67,232,255,.20),transparent 30%),radial-gradient(circle at 50% 100%,rgba(183,161,255,.18),transparent 32%),linear-gradient(135deg,#050610 0%,#111423 48%,#050610 100%);overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 78%)}a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1120px,92vw);margin:0 auto;padding:38px 0 54px}.hero{text-align:center;padding:50px 0 26px}.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(67,232,255,.42);background:rgba(67,232,255,.08);color:var(--cyan);font-weight:900;font-size:12px;letter-spacing:.09em;text-transform:uppercase}.status{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.07);color:#dce5ff;font-size:12px;font-weight:800}.status.release{color:var(--green)}.status.testing{color:var(--gold)}h1{font-size:clamp(38px,7vw,76px);line-height:.96;margin:20px 0 13px;letter-spacing:-.055em}h2{font-size:clamp(25px,3vw,36px);line-height:1.1;margin:0 0 16px}h3{font-size:20px;margin:24px 0 8px;color:var(--gold)}p{color:var(--muted);margin:0 0 14px}.lead{font-size:clamp(17px,2.1vw,22px);max-width:860px;margin:0 auto;color:#e0e7ff}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:30px 0}.grid.three{grid-template-columns:repeat(3,1fr)}.card{position:relative;background:linear-gradient(180deg,var(--panel2),rgba(10,13,28,.86));border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);overflow:hidden}.card:after{content:"";position:absolute;inset:auto -20% -45% 35%;height:120px;background:radial-gradient(circle,rgba(67,232,255,.16),transparent 68%);pointer-events:none}.app-title{display:flex;align-items:flex-start;gap:13px;margin-bottom:9px}.icon{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.10);border:1px solid var(--line);font-size:27px;flex:0 0 auto}.app-title strong{display:block;color:#fff;font-size:22px;line-height:1.14}.tag{color:var(--gold);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.075em;margin-top:4px}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 14px;border-radius:15px;border:1px solid rgba(255,255,255,.16);background:rgba(67,232,255,.13);font-weight:900;color:#fff;font-size:14px}.btn.alt{background:rgba(255,95,168,.12)}.btn.gold{background:rgba(255,209,102,.13)}.btn.green{background:rgba(112,255,178,.12)}.mini{font-size:13px;color:#cbd3ea}.kv{display:grid;grid-template-columns:210px 1fr;gap:8px;margin:6px 0;color:var(--muted)}.kv strong{color:#fff}.legal{max-width:940px}.legal ul{color:var(--muted);padding-left:22px}.legal li{margin:7px 0}.notice{border-left:4px solid var(--gold);padding:14px 16px;background:rgba(255,209,102,.08);border-radius:16px;color:#e9ddbb}.footer{margin-top:38px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:14px;text-align:center}@media(max-width:820px){.grid,.grid.three{grid-template-columns:1fr}.hero{padding-top:30px}.kv{grid-template-columns:1fr}.card{padding:20px}}</style>
 </head>
 <body>
   <main class="wrap">
     <section class="hero">
       <div class="badge">Official Developer App Hub</div>
       <h1>Flirty Quiz Studio</h1>
-      <p class="lead">Official app information, privacy policies, terms of service and support links for Android apps published by Flirty Quiz Studio.</p>
+      <p class="lead">Official app information, privacy policies, terms of service, Google Play links and support details for Android apps published by Flirty Quiz Studio.</p>
+      <div class="links" style="justify-content:center;margin-top:24px">
+        <a class="btn" href="#apps">View apps</a>
+        <a class="btn gold" href="app-ads.txt">app-ads.txt</a>
+        <a class="btn alt" href="mailto:flirtyquiz.contact@gmail.com">Contact support</a>
+      </div>
     </section>
 
-    <section class="grid" aria-label="Apps">
+    <section id="apps" class="grid" aria-label="Official apps">
+
       <article class="card">
         <div class="app-title">
-          <div class="icon"></div>
+          <div class="icon">🧩</div>
           <div>
             <strong>Block Buster Vortex</strong>
             <div class="tag">Neon Block Puzzle Game</div>
           </div>
         </div>
-        <p>Futuristic block puzzle gameplay with Adventure stages, Daily Puzzle challenges, Events, rewards, achievements, leaderboards, Google Play Games support and unlockable cosmetics.</p>
+        <p>A futuristic block puzzle game with clean combos, level progression, rewards and neon arcade energy.</p>
+        <p class="mini"><strong>Package:</strong> com.blockbustervortex · <span class="status testing">Closed testing</span></p>
         <div class="links">
-          <a class="btn" href="BlockBusterVortex/">Website</a>
-          <a class="btn alt" href="BlockBusterVortex/privacy.html">Privacy Policy</a>
+          <a class="btn" href="BlockBusterVortex/">App page</a>
+          <a class="btn alt" href="BlockBusterVortex/privacy.html">Privacy</a>
           <a class="btn gold" href="BlockBusterVortex/terms.html">Terms</a>
-          <a class="btn" href="https://play.google.com/store/apps/details?id=com.blockbustervortex">Google Play</a>
+          <a class="btn green" href="https://play.google.com/store/apps/details?id=com.blockbustervortex">Google Play</a>
         </div>
       </article>
-
       <article class="card">
         <div class="app-title">
-          <div class="icon"></div>
+          <div class="icon">🀄</div>
           <div>
-            <strong>Ultimatum Share</strong>
-            <div class="tag">File Transfer App</div>
+            <strong>Mahjong Brain Training</strong>
+            <div class="tag">Mahjong Puzzle &amp; Brain Training</div>
           </div>
         </div>
-        <p>Local-first Android file transfer and file tools app with user-initiated sharing, local network workflows, file handling and optional premium features.</p>
+        <p>A polished mahjong-style matching puzzle game focused on memory, attention, pair logic and relaxing brain training.</p>
+        <p class="mini"><strong>Package:</strong> com.mahjong.puzzlematch.math · <span class="status release">Release</span></p>
         <div class="links">
-          <a class="btn" href="privacy.html">Privacy Policy</a>
-          <a class="btn alt" href="terms.html">Terms</a>
-          <a class="btn gold" href="app-ads.txt">app-ads.txt</a>
+          <a class="btn" href="MahjongBrainTraining/">App page</a>
+          <a class="btn alt" href="MahjongBrainTraining/privacy.html">Privacy</a>
+          <a class="btn gold" href="MahjongBrainTraining/terms.html">Terms</a>
+          <a class="btn green" href="https://play.google.com/store/apps/details?id=com.mahjong.puzzlematch.math">Google Play</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="app-title">
+          <div class="icon">💘</div>
+          <div>
+            <strong>Funny Quiz: Couples &amp; Party</strong>
+            <div class="tag">Couples &amp; Party Quiz</div>
+          </div>
+        </div>
+        <p>A light entertainment quiz app for couples, friends and party moments, with funny prompts and playful results.</p>
+        <p class="mini"><strong>Package:</strong> com.loveflirtyquiz.app · <span class="status release">Release</span></p>
+        <div class="links">
+          <a class="btn" href="FunnyQuiz/">App page</a>
+          <a class="btn alt" href="FunnyQuiz/privacy.html">Privacy</a>
+          <a class="btn gold" href="FunnyQuiz/terms.html">Terms</a>
+          <a class="btn green" href="https://play.google.com/store/apps/details?id=com.loveflirtyquiz.app">Google Play</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="app-title">
+          <div class="icon">🔥</div>
+          <div>
+            <strong>Couples Dare:Relationship Quiz</strong>
+            <div class="tag">Relationship Quiz &amp; Dares</div>
+          </div>
+        </div>
+        <p>A couples entertainment app with relationship-style questions, playful challenges and dare-style conversation prompts.</p>
+        <p class="mini"><strong>Package:</strong> com.lauri.couplesdare · <span class="status release">Release</span></p>
+        <div class="links">
+          <a class="btn" href="CouplesDare/">App page</a>
+          <a class="btn alt" href="CouplesDare/privacy.html">Privacy</a>
+          <a class="btn gold" href="CouplesDare/terms.html">Terms</a>
+          <a class="btn green" href="https://play.google.com/store/apps/details?id=com.lauri.couplesdare">Google Play</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="app-title">
+          <div class="icon">⚡</div>
+          <div>
+            <strong>Ultimatum Share: File Transfer</strong>
+            <div class="tag">File Transfer &amp; Local Tools</div>
+          </div>
+        </div>
+        <p>A local-first Android file transfer and file tools app for user-selected files, local sharing workflows and optional premium features.</p>
+        <p class="mini"><strong>Package:</strong> com.ultimatum.flashshare · <span class="status release">Release</span></p>
+        <div class="links">
+          <a class="btn" href="UltimatumShare/">App page</a>
+          <a class="btn alt" href="UltimatumShare/privacy.html">Privacy</a>
+          <a class="btn gold" href="UltimatumShare/terms.html">Terms</a>
+          <a class="btn green" href="https://play.google.com/store/apps/details?id=com.ultimatum.flashshare">Google Play</a>
         </div>
       </article>
     </section>
 
-    <section class="card info">
+    <section class="card">
       <h2>Developer Information</h2>
       <div class="kv"><strong>Developer</strong><span>Flirty Quiz Studio</span></div>
-      <div class="kv"><strong>Support email</strong><span>flirtyquiz.contact@gmail.com</span></div>
+      <div class="kv"><strong>Support email</strong><span><a href="mailto:flirtyquiz.contact@gmail.com">flirtyquiz.contact@gmail.com</a></span></div>
       <div class="kv"><strong>Authorized domain</strong><span>flirtyquizcontact-rgb.github.io</span></div>
+      <div class="kv"><strong>AdMob seller file</strong><span><a href="app-ads.txt">app-ads.txt</a></span></div>
+      <p class="notice">This website is the official public legal and support hub for the apps listed above. Each app has its own dedicated Privacy Policy and Terms page.</p>
     </section>
 
     <footer class="footer">
