@@ -1,0 +1,32 @@
+FLIRTY QUIZ STUDIO - GITHUB PAGES UPDATE
+Generated: June 8, 2026
+
+FILES INCLUDED:
+- index.html
+- app-ads.txt
+- MahjongBrainTraining/privacy.html
+- MahjongBrainTraining/terms.html
+- FunnyLovelyQuiz/privacy.html
+- FunnyLovelyQuiz/terms.html
+- CouplesDare/privacy.html
+- CouplesDare/terms.html
+
+UPLOAD STEPS:
+1. Open your GitHub repository: flirtyquizcontact-rgb.github.io
+2. Make a backup first: Code > Download ZIP.
+3. Upload these files/folders into the root of the repository.
+4. When GitHub asks about existing files, replace index.html and keep app-ads.txt unchanged if already present.
+5. Commit changes to the branch used by GitHub Pages, usually main.
+6. Test these URLs after publishing:
+   https://flirtyquizcontact-rgb.github.io/
+   https://flirtyquizcontact-rgb.github.io/MahjongBrainTraining/privacy.html
+   https://flirtyquizcontact-rgb.github.io/MahjongBrainTraining/terms.html
+   https://flirtyquizcontact-rgb.github.io/FunnyLovelyQuiz/privacy.html
+   https://flirtyquizcontact-rgb.github.io/FunnyLovelyQuiz/terms.html
+   https://flirtyquizcontact-rgb.github.io/CouplesDare/privacy.html
+   https://flirtyquizcontact-rgb.github.io/CouplesDare/terms.html
+   https://flirtyquizcontact-rgb.github.io/app-ads.txt
+
+IMPORTANT LEGAL CHECK:
+Before using these URLs in Google Play Console, verify that each app policy matches the exact SDKs, permissions and data collection behavior inside that app.
+If an app does not use AdMob, Firebase, Google Play Billing or Play Games, remove that service from its policy.
