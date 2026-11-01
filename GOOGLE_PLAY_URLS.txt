@@ -1,31 +1,31 @@
 GOOGLE PLAY CONSOLE URLS - FLIRTY QUIZ STUDIO
 Generated: June 8, 2026
 
-Block Buster Vortex
+Block Puzzle Game: Vortex
 Package: com.blockbustervortex
 Privacy Policy URL: https://flirtyquizcontact-rgb.github.io/BlockBusterVortex/privacy.html
 Terms URL: https://flirtyquizcontact-rgb.github.io/BlockBusterVortex/terms.html
 Google Play URL: https://play.google.com/store/apps/details?id=com.blockbustervortex
 
-Mahjong Brain Training
+Mahjong: Royal Tile Match
 Package: com.mahjong.puzzlematch.math
 Privacy Policy URL: https://flirtyquizcontact-rgb.github.io/MahjongBrainTraining/privacy.html
 Terms URL: https://flirtyquizcontact-rgb.github.io/MahjongBrainTraining/terms.html
 Google Play URL: https://play.google.com/store/apps/details?id=com.mahjong.puzzlematch.math
 
-Funny Quiz: Couples & Party
+Flirty Vibes: Truth or Dare
 Package: com.loveflirtyquiz.app
 Privacy Policy URL: https://flirtyquizcontact-rgb.github.io/FunnyQuiz/privacy.html
 Terms URL: https://flirtyquizcontact-rgb.github.io/FunnyQuiz/terms.html
 Google Play URL: https://play.google.com/store/apps/details?id=com.loveflirtyquiz.app
 
-Couples Dare:Relationship Quiz
+Couples Dare: Couple Games
 Package: com.lauri.couplesdare
 Privacy Policy URL: https://flirtyquizcontact-rgb.github.io/CouplesDare/privacy.html
 Terms URL: https://flirtyquizcontact-rgb.github.io/CouplesDare/terms.html
 Google Play URL: https://play.google.com/store/apps/details?id=com.lauri.couplesdare
 
-Ultimatum Share: File Transfer
+Ultimatum: QR File Transfer
 Package: com.ultimatum.flashshare
 Privacy Policy URL: https://flirtyquizcontact-rgb.github.io/UltimatumShare/privacy.html
 Terms URL: https://flirtyquizcontact-rgb.github.io/UltimatumShare/terms.html
