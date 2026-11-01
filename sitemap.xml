@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flirty Quiz Studio - Official App Hub</title>
-  <meta name="description" content="Official developer hub for Flirty Quiz Studio Android apps, including DirectBeam: privacy policies, terms of service, Google Play links, support information and app-ads.txt." />
+  <title>Quiz Fans Studio - Official App Hub</title>
+  <meta name="description" content="Official developer hub for Quiz Fans Studio Android apps, including DirectBeam: privacy policies, terms of service, Google Play links, support information and app-ads.txt." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#101322" />
   <meta property="og:title" content="Flirty Quiz Studio - Official Android Apps" />
@@ -17,8 +17,8 @@
   <main class="wrap">
     <section class="hero">
       <div class="badge">Official Developer App Hub</div>
-      <h1>Flirty Quiz Studio</h1>
-      <p class="lead">Official app information, privacy policies, terms of service, Google Play links and support details for Android apps published by Flirty Quiz Studio.</p>
+      <h1>Quiz Fans Studio</h1>
+      <p class="lead">Official app information, privacy policies, terms of service, Google Play links and support details for Android apps published by Quiz Fans Studio.</p>
       <div class="links" style="justify-content:center;margin-top:24px">
         <a class="btn" href="#apps">View apps</a>
         <a class="btn gold" href="app-ads.txt">app-ads.txt</a>
@@ -49,14 +49,14 @@
         <div class="app-title">
           <div class="icon">🀄</div>
           <div>
-            <strong>Mahjong Brain Training</strong>
+            <strong>Mahjong: Royal Tile Match</strong>
             <div class="tag">Mahjong Puzzle &amp; Brain Training</div>
           </div>
         </div>
         <p>A polished mahjong-style matching puzzle game focused on memory, attention, pair logic and relaxing brain training.</p>
         <p class="mini"><strong>Package:</strong> com.mahjong.puzzlematch.math · <span class="status release">Release</span></p>
         <div class="links">
-          <a class="btn" href="MahjongBrainTraining/">App page</a>
+          <a class="btn" href="Mahjong: Royal Tile Match/">App page</a>
           <a class="btn alt" href="MahjongBrainTraining/privacy.html">Privacy</a>
           <a class="btn gold" href="MahjongBrainTraining/terms.html">Terms</a>
           <a class="btn green" href="https://play.google.com/store/apps/details?id=com.mahjong.puzzlematch.math">Google Play</a>
@@ -83,8 +83,8 @@
         <div class="app-title">
           <div class="icon">🔥</div>
           <div>
-            <strong>Couples Dare:Relationship Quiz</strong>
-            <div class="tag">Relationship Quiz &amp; Dares</div>
+            <strong>Couples Dare: Couple Games</strong>
+            <div class="tag">Couple Games &amp;Couples Dare</div>
           </div>
         </div>
         <p>A couples entertainment app with relationship-style questions, playful challenges and dare-style conversation prompts.</p>
@@ -100,7 +100,7 @@
         <div class="app-title">
           <div class="icon">⚡</div>
           <div>
-            <strong>Ultimatum Share: File Transfer</strong>
+            <strong>Ultimatum: QR File Transfer</strong>
             <div class="tag">File Transfer &amp; Local Tools</div>
           </div>
         </div>
@@ -117,7 +117,7 @@
         <div class="app-title">
           <div class="icon"><img src="assets/directbeam-icon.png" alt="DirectBeam app icon"></div>
           <div>
-            <strong>DirectBeam: File Transfer</strong>
+            <strong>File Transfer: Android to iOS</strong>
             <div class="tag">Direct Local File Transfer</div>
           </div>
         </div>
@@ -134,7 +134,7 @@
 
     <section class="card">
       <h2>Developer Information</h2>
-      <div class="kv"><strong>Developer</strong><span>Flirty Quiz Studio</span></div>
+      <div class="kv"><strong>Developer</strong><span>Quiz Fans Studio</span></div>
       <div class="kv"><strong>Support email</strong><span><a href="mailto:flirtyquiz.contact@gmail.com">flirtyquiz.contact@gmail.com</a></span></div>
       <div class="kv"><strong>Authorized domain</strong><span>flirtyquizcontact-rgb.github.io</span></div>
       <div class="kv"><strong>AdMob seller file</strong><span><a href="app-ads.txt">app-ads.txt</a></span></div>
@@ -142,7 +142,7 @@
     </section>
 
     <footer class="footer">
-      <p>© 2026 Flirty Quiz Studio. All rights reserved.</p>
+      <p>© 2026 Quiz fans Studio. All rights reserved.</p>
     </footer>
   </main>
 </body>
