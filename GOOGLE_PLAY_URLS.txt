@@ -34,3 +34,15 @@ Google Play URL: https://play.google.com/store/apps/details?id=com.ultimatum.fla
 Legacy Ultimatum Share root URLs also included:
 Privacy Policy URL: https://flirtyquizcontact-rgb.github.io/privacy.html
 Terms URL: https://flirtyquizcontact-rgb.github.io/terms.html
+
+
+SeeU (beta, not yet approved for public release)
+Package: com.seeu.prototype (verify release applicationId before Play submission)
+Website: https://flirtyquizcontact-rgb.github.io/seeu/
+Privacy Policy URL: https://flirtyquizcontact-rgb.github.io/seeu/privacy/
+Terms URL: https://flirtyquizcontact-rgb.github.io/seeu/terms/
+Account Deletion URL: https://flirtyquizcontact-rgb.github.io/seeu/delete-account/
+Support URL: https://flirtyquizcontact-rgb.github.io/seeu/support/
+Circle Invitations: https://flirtyquizcontact-rgb.github.io/seeu/invite/?code=INVITE_CODE
+Developer: Laurențiu Iancu (Quiz Fans Studio), Romania
+Status: Documents for beta; Billing, server retention and account deletion under verification.
