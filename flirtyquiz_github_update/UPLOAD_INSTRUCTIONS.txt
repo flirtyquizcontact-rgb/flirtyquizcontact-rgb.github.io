@@ -26,7 +26,3 @@ UPLOAD STEPS:
    https://flirtyquizcontact-rgb.github.io/CouplesDare/privacy.html
    https://flirtyquizcontact-rgb.github.io/CouplesDare/terms.html
    https://flirtyquizcontact-rgb.github.io/app-ads.txt
-
-IMPORTANT LEGAL CHECK:
-Before using these URLs in Google Play Console, verify that each app policy matches the exact SDKs, permissions and data collection behavior inside that app.
-If an app does not use AdMob, Firebase, Google Play Billing or Play Games, remove that service from its policy.
