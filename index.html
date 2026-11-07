@@ -121,6 +121,13 @@ h1,h2,h3,p{margin-top:0}
 @media(max-width:750px){.brand-banner{aspect-ratio:16/9;border-radius:17px;margin-top:28px}.brand-banner img{object-fit:cover}.header-content{min-height:78px}.logo{width:50px;height:50px;flex-basis:50px;border-radius:14px}.wordmark{font-size:1rem}}
 @media(max-width:440px){.brand-banner{aspect-ratio:16/9;border-radius:13px}.header-content{gap:9px}.logo{width:45px;height:45px;flex-basis:45px}.hero{padding-top:45px}}
 @media(prefers-reduced-motion:reduce){.brand-banner,.brand-banner img,.banner-glint{transition:none!important;transform:none!important}}
+
+/* Consistent design for prelaunch apps */
+.upcoming-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px;align-items:stretch}
+.testing-section .upcoming-grid .app-card{max-width:none;height:100%}
+.testing-section .upcoming-grid .upcoming-icon{display:grid;place-items:center;flex:0 0 86px;font-size:1.45rem;font-weight:900;letter-spacing:-.06em;color:#dffaff;background:radial-gradient(circle at 25% 15%,rgba(105,232,255,.42),transparent 72%),linear-gradient(135deg,#153d65,#26214e);border:1px solid rgba(130,227,255,.5);box-shadow:0 10px 26px rgba(33,130,201,.18)}
+@media(max-width:920px){.upcoming-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.testing-section .upcoming-grid .upcoming-icon{flex-basis:67px}}
 </style>
 </head>
 <body>
@@ -262,6 +269,7 @@ h1,h2,h3,p{margin-top:0}
 </section>
 <section class="container testing-section" aria-labelledby="testing-title">
  <div class="section-heading"><div><div class="section-kicker">In development</div><h2 id="testing-title">Coming next</h2></div></div>
+ <div class="upcoming-grid">
  <article class="app-card" aria-labelledby="seeu-title">
   <div class="app-top">
    <div class="app-icon-link" role="img" aria-label="SeeU location pin placeholder icon" style="cursor:default" >🧭</div>
@@ -271,6 +279,18 @@ h1,h2,h3,p{margin-top:0}
   <div class="app-bottom"><div class="package">Android <span class="package-sep">/</span> <code>com.quizfansstudio.seeu</code></div>
   <nav class="app-actions" aria-label="SeeU links"><a class="action action-main" href="seeu/">Website</a><a class="action" href="seeu/privacy/">Privacy</a><a class="action" href="seeu/terms/">Terms</a><a class="action" href="seeu/delete-account/">Account deletion</a></nav></div>
  </article>
+ <article class="app-card jobbiconex-card" aria-labelledby="jobbiconex-title" style="--accent:#6fd5f8">
+  <div class="app-top">
+   <div class="app-icon-link upcoming-icon" role="img" aria-label="JobBiconex monogram placeholder; official icon not available">JB</div>
+   <div class="app-identity"><div class="app-category">Jobs in Romania · Closed testing</div><h3 id="jobbiconex-title">JobBiconex: Jobs in Romania</h3><span class="state state-testing"><span class="state-dot"></span>Public launch pending</span></div>
+  </div>
+  <p class="app-description">A jobs-focused Android app for Romania. Approved after testing and preparing for public launch; currently not available for general download.</p>
+  <div class="app-bottom"><div class="package">Android <span class="package-sep">/</span> <code>com.jobbiconex.app</code></div>
+  <nav class="app-actions" aria-label="JobBiconex links">
+    <a class="action action-main" href="https://jobbiconex-app.web.app/legal/privacy.html" rel="noopener noreferrer">Official Privacy Policy <span aria-hidden="true">↗</span></a>
+  </nav></div>
+ </article>
+ </div>
 </section>
 <section class="container legal-info" id="legal" aria-labelledby="legal-title">
  <div><div class="section-kicker">Transparency &amp; support</div><h2 id="legal-title">Clear information for every app.</h2>
