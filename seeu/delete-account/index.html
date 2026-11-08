@@ -1,1 +1,55 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#07152c"><meta name="description" content="SeeU by QuizFans Studio: private circles, optional location sharing, safety check-ins and clear privacy controls."><meta name="referrer" content="strict-origin-when-cross-origin"><title>Account & Data Deletion | SeeU</title><link rel="stylesheet" href="/seeu/assets/style.css"></head><body><header><div class="wrap"><nav><a class="brand" href="/seeu/">See<em>U</em></a><div class="navlinks"><a href="/seeu/" >Home</a><a href="/seeu/privacy/" >Privacy</a><a href="/seeu/terms/" >Terms</a><a href="/seeu/delete-account/" aria-current="page">Delete account</a><a href="/seeu/support/" >Support</a></div></nav><div class="hero"><span class="eyebrow">QuizFans Studio · SeeU</span><h1>Account & Data Deletion</h1><p>How to contact us about account removal, and what remains before public launch.</p><span class="pill">Pre-release documentation</span></div></div></header><main class="wrap"><div class="draft" role="status">BETA SERVICE NOTICE: This document describes the current SeeU test build. Paid subscriptions, verified account-data deletion and final server-side retention controls are not yet operational. They must be completed and tested before the public Google Play release.</div><div class="panel"><section><h2>SeeU-specific account deletion request</h2><p>This page applies specifically to <strong>SeeU</strong>, which uses Firebase/Google sign-in and cloud data. The general deletion documentation for other Quiz Fans Studio apps, many of which are offline, does not replace this SeeU procedure. View the <a href="https://github.com/flirtyquizcontact-rgb/Data-Deletion-Request">studio-wide deletion information</a> for other apps.</p><p>For this pre-release version, contact the developer at <a href="mailto:flirtyquiz.contact@gmail.com?subject=SeeU%20account%20deletion%20request">flirtyquiz.contact@gmail.com</a> with the subject <strong>SeeU account deletion request</strong>. Identify the Google account used for SeeU, but <strong>never send your password</strong>. The developer may request secure verification of account ownership. You may request deletion even if you have already uninstalled SeeU. Do not include someone else's GPS history in the email.</p><p><a class="cta" href="mailto:flirtyquiz.contact@gmail.com?subject=SeeU%20account%20deletion%20request">Email a deletion request</a></p></section><section><h2>What data must be covered</h2><p>The final removal process must account for Firebase Authentication identities; Circle memberships and ownership; consents and invitation data; shared location, last-known positions and route history; optional profile photos/details; tokens, chat and safety records where attributable to the person, with safeguards for other Circle members' rights.</p></section><section><h2>Current technical status</h2><p class="warning">The beta has not yet passed an end-to-end account deletion test. An email request is a contact method, not proof that automated or complete removal is available. We are not claiming compliance with the Google Play account-deletion requirement yet.</p></section><section><h2>Before Google Play publication</h2><p>A discoverable in-app deletion control, an external deletion-request route, secure identity checks, backend data cleanup, a verifiable completion process and documented lawful retention exceptions must be implemented and tested. Users will be informed of the final process when it is live.</p></section></div></main><footer><div class="wrap"><span>© 2026 Laurențiu Iancu · Quiz Fans Studio · SeeU</span><span>Contact: <a href="mailto:flirtyquiz.contact@gmail.com">flirtyquiz.contact@gmail.com</a></span></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07152c">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Request removal of a SeeU account whether or not you can sign in.">
+  <link rel="canonical" href="https://flirtyquizcontact-rgb.github.io/seeu/delete-account/">
+  <link rel="stylesheet" href="/seeu/assets/style.css">
+  <title>Account &amp; Data Deletion | SeeU</title>
+</head>
+<body>
+<header><div class="wrap">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="/seeu/" aria-label="SeeU home">See<em>U</em></a>
+    <div class="navlinks"><a href="/seeu/">Home</a>
+<a href="/seeu/privacy/">Privacy</a>
+<a href="/seeu/terms/">Terms</a>
+<a href="/seeu/delete-account/" aria-current="page">Delete account</a>
+<a href="/seeu/support/">Support</a></div>
+  </nav>
+  <div class="hero">
+    <span class="eyebrow">SeeU · Quiz Fans Studio</span>
+    <h1>Account &amp; Data Deletion</h1>
+    <p>Request removal of a SeeU account whether or not you can sign in.</p>
+    <span class="pill">Last updated: 8 November 2026</span>
+  </div>
+</div></header>
+<main class="wrap" id="main"><div class="panel">
+
+<section><h2>Request deletion of your SeeU account</h2>
+<p>This page is the external account-deletion route for <strong>SeeU by Quiz Fans Studio</strong>. You can submit a request <strong>even if SeeU is uninstalled or you cannot sign in</strong>.</p>
+<p><a class="cta" href="mailto:flirtyquiz.contact@gmail.com?subject=SeeU%20account%20deletion%20request">Request account deletion by email</a></p>
+<p>Email <a href="mailto:flirtyquiz.contact@gmail.com?subject=SeeU%20account%20deletion%20request">flirtyquiz.contact@gmail.com</a> with the subject <strong>SeeU account deletion request</strong>. Tell us which SeeU account you want removed (for example, the email address associated with it) and whether you can still sign in. Do not send passwords, authentication codes, purchase tokens, private GPS records or someone else's information. We may verify your account ownership using a proportionate method before deletion.</p></section>
+<section><h2>Request deletion from within SeeU</h2>
+<p>If you can sign in, open <strong>Profile → Legal &amp; Privacy → Account deletion</strong>, review the information and submit your request. You can check the request status in the same area while the feature remains available. This submits a request for review; it does <strong>not</strong> immediately delete all cloud data. You do not have to reinstall the app to use the external email route.</p></section>
+<section><h2>What is deleted</h2>
+<p>When the request has been verified and processed, the deletion procedure is intended to cover your SeeU account identity, profile, your Circle participation and invitations, location and last-known positions, route history and any paid archive data attributable to you, device push tokens, applicable chats, safety records and other account-linked SeeU information, subject to another user's rights and legitimate retention exceptions.</p><p>Some shared Circle material may involve other users and must be assessed carefully. Private device-only information can be removed by clearing app data or uninstalling SeeU; this is separate from the server-side account-deletion request.</p></section>
+<section><h2>How the request is processed</h2>
+<p>We review account ownership and any dependencies such as shared Circle ownership before completing data removal. Where necessary, we may ask you to transfer Circle ownership or contact support about an active Google Play subscription. Submission, an account suspension or a status of <strong>pending review</strong> is <strong>not</strong> proof that deletion has completed. You may contact us to ask about progress.</p><p>We aim to process verified requests without undue delay and respond to rights requests within applicable statutory deadlines, generally one month under GDPR, subject to permitted extensions and exceptions. We will not describe the account as erased until the relevant deletion process has actually completed.</p></section>
+<section><h2>What may be retained</h2>
+<p>Limited records may be retained only where a valid legal obligation, security/fraud-prevention reason, the rights of another person, or an applicable backup lifecycle justifies retention. Retention depends on the record and its purpose; we do not claim an unverified universal deletion deadline for backup or third-party records. Our <a href="/seeu/privacy/">Privacy Policy</a> explains the categories and retention criteria.</p><p>Google Play purchase records and subscription controls are operated separately by Google. To stop renewal, manage the subscription in <a href="https://play.google.com/store/account/subscriptions" rel="noopener noreferrer">Google Play Subscriptions</a>. Account deletion and cancellation are separate actions; contact support if an active subscription creates a problem completing your request.</p></section>
+<section><h2>Delete location sharing without deleting the account</h2>
+<p>You can stop GPS, revoke Android location permission, disable sharing with an individual Circle or leave a Circle. These are not substitutes for requesting full account deletion and may not erase information other members have already seen or saved. For full account deletion, use the request button above.</p></section>
+<section><h2>Help and privacy rights</h2>
+<p>Support and privacy email: <a href="mailto:flirtyquiz.contact@gmail.com">flirtyquiz.contact@gmail.com</a>. You may also request access, correction or erasure of particular personal data under applicable law. Please include only the minimum information needed to identify your request.</p></section>
+
+</div></main>
+<footer><div class="wrap">
+  <span>© 2026 Laurențiu Iancu · Quiz Fans Studio · SeeU</span>
+  <span><a href="/seeu/privacy/">Privacy</a> · <a href="/seeu/terms/">Terms</a> · <a href="/seeu/delete-account/">Delete account</a> · <a href="/seeu/support/">Support</a> · <a href="mailto:flirtyquiz.contact@gmail.com">Contact</a></span>
+</div></footer>
+</body>
+</html>
