@@ -1,0 +1,3 @@
+# Include Android Digital Asset Links verification file in GitHub Pages Jekyll output.
+include:
+  - .well-known
