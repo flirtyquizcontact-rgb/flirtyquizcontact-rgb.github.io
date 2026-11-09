@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.quizfansstudio.seeu",
+      "sha256_cert_fingerprints": [
+        "1F:6C:BC:10:5E:F5:A8:1D:B2:95:9F:79:FD:57:F7:2C:8F:EA:63:6B:3D:29:3C:98:BF:0D:4C:D8:1B:D9:D4:D8",
+        "9B:02:2C:62:BC:C0:D1:DB:0F:07:CF:67:74:8F:79:42:A7:58:DC:84:A1:5C:41:04:AB:F0:72:A0:DE:6C:6F:DB"
+      ]
+    }
+  }
+]
