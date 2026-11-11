@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Official Ultimatum Windows Companion status, setup guide, local transfer security and download availability.">
+<link rel="canonical" href="https://quizfansstudio.github.io/UltimatumShare/windows.html">
+<title>Ultimatum Windows Companion | Official setup and release status</title>
+<style>
+:root{color-scheme:dark;--bg:#070b19;--panel:#111b35;--line:#314268;--text:#edf5ff;--muted:#bed0e8;--cyan:#54ddff;--mint:#6af0bb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#17274b 0%,transparent 48%),radial-gradient(ellipse at 90% 12%,#2b1643 0%,transparent 48%),var(--bg);color:var(--text);font:16px/1.62 system-ui,Segoe UI,Arial,sans-serif}
+main{width:min(990px,92vw);margin:0 auto;padding:35px 0 65px}a{color:var(--cyan)}h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:10px 0 12px}h2{font-size:22px;margin:0 0 9px}p{color:var(--muted)}.eyebrow{color:var(--mint);font-weight:800;letter-spacing:.09em;text-transform:uppercase;font-size:12px}
+.panel{background:#111b35db;border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:18px}.status{border-left:4px solid #ffcf78;background:#332b28;padding:13px 17px;border-radius:11px;color:#ffe3af;font-weight:700}.cta{display:inline-block;padding:11px 16px;border:1px solid var(--cyan);border-radius:12px;text-decoration:none;font-weight:800;margin:8px 8px 8px 0}ol{padding-left:24px;color:var(--muted)}li{margin:8px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}@media(max-width:720px){.grid{grid-template-columns:1fr}}footer{margin-top:28px;color:#99b2d0;font-size:13px}
+</style></head><body><main>
+<a href="./">← Ultimatum app</a>
+<p class="eyebrow">Official Windows Companion · Quiz Fans Studio</p>
+<h1>Ultimatum for Windows</h1>
+<p>Send files from your Windows computer to your Android phone and save files shared from Android. Transfer directly over a trusted local Wi-Fi network, with phone approval and file-integrity verification.</p>
+<section class="panel"><h2>Download &amp; release status</h2>
+<div class="status">Windows installer in local testing. No verified public download is available yet.</div>
+<p>Only a validated installer will be linked here after it has been published to the official GitHub Releases page. Do not download unofficial copies.</p>
+<a class="cta" href="https://github.com/QuizFansStudio/ultimatum-flash/releases" rel="noopener noreferrer">View official Releases</a>
+</section>
+<div class="grid">
+<section class="panel"><h2>Setup in five steps</h2><ol>
+<li>Install Ultimatum on your Android phone from <a href="https://play.google.com/store/apps/details?id=com.ultimatum.flashshare">Google Play</a>.</li>
+<li>Once a public installer is available, install Windows Companion from the official release.</li>
+<li>Connect both devices to the same trusted Wi-Fi network and open PC Bridge → Start on Android.</li>
+<li>In Windows Companion select Find phone, enter the temporary security token shown on Android, and approve the PC on the phone.</li>
+<li>Use Send to phone and Receive from phone to transfer your selected files.</li>
+</ol></section>
+<section class="panel"><h2>Safety &amp; privacy</h2>
+<p>Current local transfers use HTTP, not HTTPS. Content and session tokens are not encrypted in transit. Use only a trusted private network; do not forward the PC Bridge port to the internet or send confidential files over an untrusted LAN.</p>
+<p>File names and transfer metadata are processed to provide the service. The desktop client stores its local pairing identifier and limited diagnostics on Windows; no automatic cloud file upload is required for the local transfer workflow.</p>
+<p>Bulk delete and ZIP are Pro features where supported by the Android app. Basic transfers and saving individual files are available without Pro.</p>
+</section></div>
+<section class="panel"><h2>Troubleshooting</h2>
+<p><strong>Phone not found:</strong> Start PC Bridge and ensure both devices are on the same local network. Enter the IP shown on Android if discovery is unavailable.</p>
+<p><strong>Connected but cannot send:</strong> Confirm the PC is approved, keep the Android service running, and reconnect. The app verifies uploaded file contents.</p>
+<p><strong>Windows publisher warning:</strong> early test builds may be unsigned. Do not disable security protections to run an unknown installer. Check the SHA-256 published with any official release.</p>
+<p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="./">App homepage</a></p>
+</section>
+<footer>© 2026 Quiz Fans Studio · Ultimatum Windows Companion · Download becomes available only after official release verification.</footer>
+</main></body></html>
