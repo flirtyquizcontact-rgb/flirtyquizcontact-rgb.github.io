@@ -1,12 +1,172 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DirectBeam Companion for Windows | Setup Guide</title>
-<meta name="description" content="Official DirectBeam Companion Windows setup, pairing and file transfer guide.">
-<style>:root{color-scheme:dark;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#071123;color:#edf9ff}*{box-sizing:border-box}body{max-width:860px;padding:24px;margin:auto}a{color:#76e8f9}.header{display:flex;align-items:center;gap:14px}.header img{width:65px;height:65px;border-radius:14px}.tag{background:#203b54;color:#c6eeff;border-radius:20px;padding:6px 11px;font-size:12px}.hero{margin:38px 0}.hero h1{font-size:clamp(31px,5vw,48px);margin-bottom:10px}.muted{color:#abcae0}.card{background:#142540;border:1px solid #335a71;border-radius:18px;padding:24px;margin:18px 0}li{margin-bottom:12px;line-height:1.5}.notice{border-left:4px solid #58dde7;background:#123247;padding:17px 18px;border-radius:10px}.disabled{display:inline-flex;background:#2b4554;color:#c3d8e7;padding:12px 18px;border-radius:12px;font-weight:700;cursor:not-allowed}.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}.small{font-size:13px}footer{margin:40px 0;color:#9aaebf}</style></head>
-<body><div class="header"><img src="../directbeam-icon.png" alt="DirectBeam icon"><div><strong>DirectBeam</strong><div class="muted">Windows Companion • Official setup guide</div></div></div>
-<main><div class="hero"><span class="tag">Windows 11 • Local network</span><h1>Connect your phone to Windows.</h1><p class="muted">A dedicated desktop app for secure transfers. Pair once, then send and receive files with clear controls.</p></div>
-<div class="notice"><strong>Windows installer is not published yet.</strong><p>This page is prepared ahead of the public release. The Companion is undergoing QA. Do not download executables from unofficial sources.</p><span class="disabled" aria-disabled="true">Download for Windows — coming after QA</span></div>
-<div class="cols"><section class="card"><h2>1. Prepare Android</h2><ol><li>Open DirectBeam on your phone.</li><li>Choose PC Connect → Windows Companion.</li><li>Start the PC session. Keep the phone and computer on the same local network.</li></ol></section><section class="card"><h2>2. Install & pair</h2><ol><li>When the verified installer is available, download it here on your Windows PC.</li><li>Open DirectBeam Companion and select your phone.</li><li>Compare the short security code displayed in both apps.</li><li>On Android, tap PAIR WINDOWS PC and enter the eight-digit code on Windows.</li></ol></section></div>
-<section class="card"><h2>3. Transfer your files</h2><p><strong>Windows → Android:</strong> use SEND FILES or drag files into the desktop workspace. Check files in the Android PC workspace.</p><p><strong>Android → Windows:</strong> choose PHONE LIBRARY (Photos, Videos, Documents, Downloads, etc.), select a file, then SAVE SELECTED TO PC. The default folder is <code>Downloads\DirectBeam</code>; you can choose another location.</p><p>Use OPEN RECEIVED FOLDER to locate your downloaded files.</p></section>
-<section class="card"><h2>Need a connection without installing Windows software?</h2><p>Use DirectBeam's PC Connect Browser mode. On your phone, open PC Connect → Show browser link / QR and open the generated HTTP link in Edge or Chrome on a trusted home or office LAN.</p><p>Never share a session token or pairing code publicly.</p></section>
-<p class="small"><a href="./">← DirectBeam overview</a> • <a href="../">Quiz Fun Studio</a></p></main><footer>Official DirectBeam support page. Windows Companion installer, release version and SHA-256 will be shown here only after verification.</footer></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050812">
+<meta name="description" content="Official DirectBeam Companion Windows download, setup guide, pairing, troubleshooting and Pro features.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://quizfansstudio.github.io/DirectBeam/windows.html">
+<title>DirectBeam Companion for Windows | Download & Setup</title>
+<style>
+:root{color-scheme:dark;--bg:#050812;--panel:#101827;--panel2:#151f31;--ink:#f5faff;--muted:#b7c8dd;--subtle:#8da4c1;--cyan:#42e8ff;--blue:#3a8dff;--violet:#9b7bff;--line:rgba(142,181,234,.25)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 90% -3%,rgba(76,80,206,.23),transparent 37%),radial-gradient(ellipse at 10% 22%,rgba(16,157,222,.13),transparent 37%),var(--bg)}
+a{color:#8cefff}a:hover{text-decoration-color:var(--cyan)}a:focus-visible,button:focus-visible{outline:3px solid var(--violet);outline-offset:4px;border-radius:8px}
+.wrap{max-width:1060px;width:calc(100% - 40px);margin:0 auto}
+header{border-bottom:1px solid var(--line);background:rgba(5,8,18,.8)}
+.nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px;color:var(--ink);font-size:19px;font-weight:850;text-decoration:none}
+.brand img{width:48px;height:48px;object-fit:cover;border-radius:12px;box-shadow:0 0 23px rgba(66,232,255,.22)}
+.nav-right{display:flex;flex-wrap:wrap;gap:16px;font-size:14px;font-weight:700}
+.hero{padding:56px 0 28px}.eyebrow{color:#95f1ff;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+h1{font-size:clamp(35px,5.5vw,63px);letter-spacing:-.05em;line-height:1.08;margin:14px 0 19px}
+.hero h1 span{background:linear-gradient(100deg,var(--cyan),#91baff,var(--violet));background-clip:text;-webkit-background-clip:text;color:transparent}
+.lead{max-width:790px;color:#bdcee4;font-size:clamp(17px,2vw,20px)}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0 0}
+.hero-tags span{font-size:12px;font-weight:740;color:#c7edfc;padding:7px 12px;border:1px solid var(--line);background:#142338;border-radius:999px}
+section{scroll-margin-top:18px}
+.release{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.8fr);gap:24px;align-items:center;margin:30px 0 40px;padding:clamp(22px,3.4vw,36px);border:1px solid rgba(66,232,255,.4);border-radius:23px;background:radial-gradient(circle at 100% 0,rgba(155,123,255,.19),transparent 48%),linear-gradient(120deg,#162b40,#11182d 70%);box-shadow:0 20px 55px rgba(0,0,0,.19)}
+h2{font-size:clamp(24px,3vw,31px);letter-spacing:-.032em;line-height:1.2;margin:0 0 15px}
+.release p{color:#c1d2e6;margin:0 0 13px}
+.eyeline{color:#8beeff;font-size:12px;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
+.status{font-size:14px;font-weight:760;color:#dbeafa;border-left:3px solid #f1c879;padding:7px 12px;background:#1a3041;border-radius:3px 9px 9px 3px}
+.status.ready{border-color:#60e6ae;background:#143a3a;color:#d4ffe8}
+.status.error{border-color:#f0c27f}
+.cta-panel{display:grid;gap:12px;align-content:center}
+.btn{min-height:49px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;text-align:center;border:1px solid #91e8fc;border-radius:13px;padding:12px 18px;font-weight:800;color:#051225;background:linear-gradient(110deg,var(--cyan),var(--blue));box-shadow:0 12px 30px rgba(58,141,255,.18)}
+.btn:hover{filter:brightness(1.07)}
+.btn.secondary{border-color:var(--line);background:#1b2a40;color:#d4eeff;box-shadow:none}
+.btn[hidden], [hidden]{display:none!important}
+.small{font-size:13px;color:#9fb6cb;line-height:1.55}
+.download-meta{font:12px/1.6 ui-monospace,Consolas,monospace;color:#b9ddec;overflow-wrap:anywhere}
+.section-title{margin:42px 0 20px}.section-title p{color:var(--muted);margin:0}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.card{min-width:0;border:1px solid var(--line);background:linear-gradient(155deg,#132238,#0e1628);padding:23px;border-radius:19px}
+.card h3{font-size:19px;margin:10px 0 10px;letter-spacing:-.02em}
+.card p,.card li{color:var(--muted);margin:0}
+.card ul{margin:10px 0 0;padding-left:20px}.card li{margin:8px 0}
+.stepno{width:35px;height:35px;display:grid;place-items:center;color:#07121e;font-weight:900;background:linear-gradient(120deg,var(--cyan),var(--blue));border-radius:11px}
+.note{margin:22px 0;padding:16px 20px;border-radius:12px;border:1px solid #3b607a;background:#13253a;color:#d8eafb}
+.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.feature{border:1px solid var(--line);border-radius:16px;padding:21px;background:#101a2e}
+.feature strong{color:#eeffff;font-size:17px}.feature p{margin:7px 0 0;color:var(--muted)}
+code{overflow-wrap:anywhere;color:#a3f5ff;font-family:ui-monospace,Consolas,monospace;font-size:.91em}
+details{margin:11px 0;border:1px solid var(--line);border-radius:13px;background:#101a2c;padding:16px 18px}
+summary{cursor:pointer;font-weight:750;color:#ecf8ff}details p{color:var(--muted);margin:11px 0 2px}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:25px 0 44px;color:#92aaca;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:760px){.release{grid-template-columns:1fr}.steps,.feature-grid{grid-template-columns:1fr}.hero{padding-top:40px}.wrap{width:calc(100% - 30px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><nav class="wrap nav" aria-label="Site navigation">
+<a class="brand" href="./"><img src="https://play-lh.googleusercontent.com/yA0eCNGCP8iwyPnvoc7XECDZReeQOPjFHlIO_jgY5SolQcJEFQyx1HNsQKF4YPdQElkXKyo-wxKaUsLnOiGhuEo=w240-h480" width="48" height="48" alt="DirectBeam app icon">DirectBeam</a>
+<div class="nav-right"><a href="./">App home</a><a href="#getting-started">Setup guide</a><a href="#features">Free &amp; Pro</a><a href="#troubleshooting">Help</a></div>
+</nav></header>
+<main class="wrap">
+<div class="hero">
+<div class="eyebrow">Official Windows Companion</div>
+<h1>DirectBeam <span>for Windows.</span></h1>
+<p class="lead">Connect your Android phone to Windows. Send files, receive downloads and manage authorized folders on your trusted local network, with a dedicated desktop interface.</p>
+<div class="hero-tags"><span>Windows 10/11 x64</span><span>Local Wi-Fi</span><span>Secure pairing</span><span>Basic transfers are free</span></div>
+</div>
+<section class="release" aria-labelledby="download-heading" id="download">
+<div>
+<div class="eyeline">Get the official desktop app</div>
+<h2 id="download-heading">Download Windows Companion</h2>
+<p id="release-summary">DirectBeam Companion V2.3.4 for Windows x64 is available from the official GitHub release. Follow the setup instructions below to connect your Android phone.</p>
+<p class="small">The public installer is <strong>Windows Companion 2.3.4</strong>. A newer six-language desktop interface has passed local QA but is <strong>not yet included</strong> in this published installer. Check the release version before installing.</p>
+<div id="release-status" class="status ready" role="status" aria-live="polite">Windows installer available · V2.3.4</div>
+</div>
+<div class="cta-panel">
+<a id="installer-download" class="btn" href="https://github.com/QuizFansStudio/DirectBeam/releases/download/windows-companion-v2.3.4/DirectBeam_Companion_Setup_x64.exe" rel="noopener noreferrer">Download for Windows (x64)</a>
+<div id="installer-details" class="download-meta">V2.3.4 · 49.6 MiB · SHA-256: 55D6D98C1C41ADF5607179CE101D2FBFBC9E0AF66DA3BBC65792D3465F5DD40C</div>
+<a class="btn secondary" href="https://github.com/QuizFansStudio/DirectBeam/releases" rel="noopener noreferrer">View official GitHub releases</a>
+<p class="small"><strong>Verified SHA-256 of Windows Companion 2.3.4 installer:</strong> <code>55d6d98c1c41adf5607179ce101d2fbfbc9e0af66da3bbc65792d3465f5dd40c</code>. This checksum is specific to the 2.3.4 installer, not future releases. For a newer installer, verify the hash shown in its own release notes.</p>
+<p class="small" id="download-note">Installer verified against the public GitHub release. This installer is not Authenticode-signed; Windows SmartScreen may warn. Verify its SHA-256 before running. Do not download from unofficial sources.</p>
+</div>
+</section>
+<section id="getting-started" aria-labelledby="setup-heading">
+<div class="section-title"><div class="eyeline">Quick start</div><h2 id="setup-heading">Connect in six simple steps</h2><p>For first-time users. Pairing does not start the five-minute Pro demonstration.</p></div>
+<div class="steps">
+<article class="card"><div class="stepno">1</div><h3>Install Android app</h3><p>Install or update <a href="https://play.google.com/store/apps/details?id=com.quizfans.directbeam">DirectBeam on Google Play</a>, then open it on your Android phone.</p></article>
+<article class="card"><div class="stepno">2</div><h3>Start the phone session</h3><p>Open <strong>PC Connect</strong> on Android. Check that the PC/API session shows <strong>Live / Running</strong>. If it is stopped, tap the available <strong>Start</strong> control and leave the session active during transfers.</p></article>
+<article class="card"><div class="stepno">3</div><h3>Use the same local network</h3><p>Connect your phone and Windows PC to the same trusted home or office network. If Windows requests a network permission, allow the app on private networks only.</p></article>
+<article class="card"><div class="stepno">4</div><h3>Launch Windows Companion</h3><p>Open <strong>DirectBeam Companion</strong> on Windows and use its <strong>Find / Scan phone</strong> option. If your phone is already paired, try the saved-device reconnect option.</p></article>
+<article class="card"><div class="stepno">5</div><h3>Approve secure pairing</h3><p>For a new PC, check the verification information displayed by both devices. Approve the connection on Android and enter the <strong>8-digit pairing code</strong> as requested. Never share the code or session token.</p></article>
+<article class="card"><div class="stepno">6</div><h3>Transfer your files</h3><p>Use <strong>PC Workspace</strong> to send files to Android. Open <strong>Phone Library</strong> to select authorized files and <strong>Save to PC</strong>. Received files are normally saved in <code>Downloads\DirectBeam</code>.</p></article>
+</div>
+<div class="note"><strong>Using browser mode instead?</strong> Windows installation is optional for browser transfers. On Android, open PC Connect, start its browser session and use the URL/QR shown by the phone in a browser on the same trusted network.</div>
+</section>
+<section id="features" aria-labelledby="features-heading">
+<div class="section-title"><div class="eyeline">Choose how you transfer</div><h2 id="features-heading">Free transfers. Optional Pro tools.</h2><p>No DirectBeam account is required for basic local transfer.</p></div>
+<div class="feature-grid">
+<div class="feature"><strong>Free · Always available</strong><p>Connect and pair devices, send files from Windows to Android, browse files made available by Android, and download individual files.</p></div>
+<div class="feature"><strong>Pro Preview · 5 minutes once</strong><p>After the phone is connected, choose a Pro action and explicitly start the demonstration. Pairing or opening the desktop app does not start the countdown. No automatic purchase is made when it ends.</p></div>
+<div class="feature"><strong>Batch Downloads &amp; Download ZIP</strong><p>Pro tools for saving multiple selected files and exporting selected DirectBeam PC Workspace files as one ZIP archive.</p></div>
+<div class="feature"><strong>Smart Sync &amp; Advanced Folders</strong><p>Compare files and retrieve selected items without automatic deletion or overwriting. Browse only directories individually approved through the Android system folder picker.</p></div>
+</div>
+<div class="note">Advanced controls require compatible Android and Windows versions and an eligible Pro preview or Pro purchase. Availability and changes are documented in the official Windows release notes. Pro is an optional one-time in-app purchase on Android.</div>
+</section>
+<section aria-labelledby="windows-legal-heading"><div class="note"><h2 id="windows-legal-heading">Privacy and file safety on Windows</h2><p>Pairing information is stored locally on your PC, including a phone identifier and TLS fingerprint; the pairing credential is stored in Windows Credential Manager. Transfer files are saved in the folder you select. Uninstalling Windows Companion may not remove those downloaded files or paired-device records. Visit the <a href="privacy.html">DirectBeam Privacy Policy</a>, <a href="terms.html">Terms of Service</a> and <a href="https://quizfansstudio.github.io/Data-Deletion-Request/">Data Deletion &amp; Local Data Controls</a> for more details.</p><p>Windows Companion uses authenticated HTTPS for supported paired-device connections. The alternative browser-transfer mode uses local HTTP; only use that mode on trusted private networks. Never share pairing codes, tokens or local connection addresses publicly.</p><p>Support: <a href="mailto:quizfans.studio@gmail.com">quizfans.studio@gmail.com</a>.</p></div></section>
+
+<section id="troubleshooting" aria-labelledby="help-heading">
+<div class="section-title"><div class="eyeline">Troubleshooting</div><h2 id="help-heading">If your phone does not connect</h2></div>
+<details><summary>Windows cannot find my Android phone</summary><p>Confirm the Android PC Connect session is started and both devices are on the same trusted LAN. Keep the phone app active for the first pairing. Some routers or firewalls block local discovery; use the app's manual connection flow if available and compare the certificate before approving.</p></details>
+<details><summary>It says disconnected or the pairing code does not work</summary><p>Restart the PC session on Android, reconnect from Windows and follow the pairing prompt shown in both apps. The eight-digit pairing code is only for pairing; do not paste private browser session links into public messages.</p></details>
+<details><summary>Photos, videos or documents are missing from Phone Library</summary><p>Android restricts access to personal storage. Grant the relevant media permission when requested, or choose files through the Android picker. For Advanced Folders, first add a specific authorized folder on the phone. The Windows app cannot automatically read all private folders.</p></details>
+<details><summary>When does my Pro preview start and end?</summary><p>The one-time five-minute preview begins only when you confirm its activation after connecting the phone. It allows new Pro actions during the remaining time. A transfer already underway can finish after the timer ends; Free transfers remain available.</p></details>
+<details><summary>Where are downloads saved?</summary><p>Windows downloads are normally placed under your Downloads\DirectBeam folder, unless you choose a different destination in the Companion.</p></details>
+<details><summary>Windows warns about an unknown publisher or SmartScreen. What should I do?</summary><p>Some Windows releases may not have an Authenticode code-signing certificate and can trigger a Windows security prompt. Download only from this official page or the linked GitHub repository, and compare the installer SHA-256 with the value in the release notes before proceeding. Do not disable Windows Defender or SmartScreen system-wide. If you cannot verify the installer, do not run it.</p></details>
+<details><summary>Why is the installer button unavailable?</summary><p>Only public releases with the verified Windows installer asset name are offered here. If no release is published or the GitHub release service cannot be checked, the page does not offer an unverified executable. Check the official GitHub releases link above.</p></details>
+</section>
+</main>
+<footer><div class="wrap"><span>© 2026 DirectBeam · Quiz Fans Studio</span><span><a href="./">DirectBeam</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:quizfans.studio@gmail.com">Support</a></span></div></footer>
+<script>
+"use strict";
+(async function checkOfficialInstaller() {
+  const status = document.getElementById("release-status");
+  const summary = document.getElementById("release-summary");
+  const button = document.getElementById("installer-download");
+  const meta = document.getElementById("installer-details");
+  const api = "https://api.github.com/repos/QuizFansStudio/DirectBeam/releases/latest";
+  const officialAssetName = "DirectBeam_Companion_Setup_x64.exe";
+  const downloadPrefix = "https://github.com/QuizFansStudio/DirectBeam/releases/download/";
+  try {
+    const response = await fetch(api, {headers:{"Accept":"application/vnd.github+json"}});
+    if (response.status === 404) {
+      // Retain the verified V2.3.4 direct-download fallback.
+      return;
+    }
+    if (!response.ok) throw new Error("GitHub API " + response.status);
+    const release = await response.json();
+    if (release.draft || release.prerelease) {
+      // Retain the verified V2.3.4 direct-download fallback.
+      return;
+    }
+    const asset = Array.isArray(release.assets) ? release.assets.find(item =>
+      item.name === officialAssetName && typeof item.browser_download_url === "string" &&
+      item.browser_download_url.startsWith(downloadPrefix) && item.size > 0) : null;
+    if (!asset) {
+      // Retain the verified V2.3.4 direct-download fallback.
+      return;
+    }
+    button.href = asset.browser_download_url;
+    button.removeAttribute("hidden");
+    status.textContent = "Windows installer available";
+    status.classList.add("ready");
+    summary.textContent = "Official Windows Companion release is ready to download. Install on Windows and follow the six steps below.";
+    const version = typeof release.tag_name === "string" ? release.tag_name : "";
+    const mb = (asset.size / 1048576).toFixed(1);
+    const digest = typeof asset.digest === "string" && /^sha256:[0-9a-f]{64}$/i.test(asset.digest) ? asset.digest : "";
+    meta.textContent = (version ? "Release " + version + " · " : "") + mb + " MiB" + (digest ? " · SHA-256 " + digest.slice(7).toUpperCase() : "");
+    meta.removeAttribute("hidden");
+  } catch (_) {
+    // Retain the verified V2.3.4 direct-download fallback if the GitHub API is unavailable.
+  }
+})();
+</script>
+</body>
+</html>
