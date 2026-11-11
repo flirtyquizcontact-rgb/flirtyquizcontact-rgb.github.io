@@ -1,12 +1,475 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DirectBeam | Local File Transfer</title><meta name="description" content="DirectBeam transfers files between Android, Windows and local browsers.">
-<style>:root{color-scheme:dark;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#071123;color:#ecfaff}*{box-sizing:border-box}body{max-width:960px;margin:auto;padding:24px}a{color:#69e9f6}header{display:flex;align-items:center;gap:15px}header img{width:64px;height:64px;border-radius:15px}h1{font-size:clamp(30px,5vw,48px);margin:22px 0 10px}.lead{font-size:18px;color:#b5cee3}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px;margin:28px 0}.card{background:#132540;border:1px solid #2a5971;border-radius:19px;padding:24px}.link{display:inline-block;background:#53dbeb;color:#052135;padding:12px 17px;border-radius:12px;font-weight:750;text-decoration:none}footer{color:#9bb7c6;font-size:13px;margin-top:55px}.download-banner{display:grid;grid-template-columns:1.6fr 1fr;gap:22px;align-items:center;margin:32px 0 8px;padding:clamp(22px,4vw,34px);border-radius:23px;border:1px solid rgba(66,232,255,.45);background:radial-gradient(circle at 94% 0%,rgba(155,123,255,.25),transparent 46%),linear-gradient(125deg,#142943,#11172e 76%);box-shadow:0 14px 45px rgba(0,0,0,.2)}.download-banner .kicker{font-size:12px;color:#79eafa;letter-spacing:.13em;text-transform:uppercase;font-weight:800}.download-banner h2{font-size:clamp(24px,3.7vw,34px);line-height:1.15;margin:11px 0 12px}.download-banner p{color:#bbd0e4;line-height:1.65;margin:0}.download-actions{text-align:center;display:grid;gap:10px;justify-items:stretch}.download-actions .link{padding:16px 18px;background:linear-gradient(110deg,#42e8ff,#3a8dff);color:#051120;box-shadow:0 9px 27px rgba(58,141,255,.2)}.download-actions .small-note{font-size:12px;line-height:1.5;color:#bbd0e4}.download-actions .secondary-link{font-size:13px}.link:focus-visible{outline:3px solid #9b7bff;outline-offset:3px}@media(max-width:700px){.download-banner{grid-template-columns:1fr}.download-actions{text-align:left}}.site-top{display:flex;align-items:center;gap:15px;flex-wrap:wrap}.site-brand{flex:1;min-width:155px}.top-install{display:inline-block;border:1px solid #42e8ff;color:#061328;background:linear-gradient(115deg,#42e8ff,#3a8dff);padding:12px 17px;border-radius:12px;text-decoration:none;font-weight:750;white-space:nowrap}.top-install:hover,.link:hover{filter:brightness(1.08)}.mobile-windows-action{margin-top:24px;display:none}.mobile-windows-action .link{background:linear-gradient(115deg,#42e8ff,#3a8dff);width:100%;text-align:center}@media(max-width:580px){.site-top nav{width:100%}.top-install{display:block;text-align:center}.mobile-windows-action{display:none}}</style></head>
-<body><header class="site-top"><img src="../directbeam-icon.png" alt="DirectBeam logo"><div class="site-brand"><strong>DirectBeam</strong><div>File Transfer • Quiz Fun Studio</div></div><nav aria-label="DirectBeam navigation"><a class="top-install" href="./windows.html">Windows Companion <span aria-hidden="true">↗</span></a></nav></header>
-<main><div class="mobile-windows-action"><a class="link" href="./windows.html">Windows Companion · Setup &amp; download status</a></div><h1>Move files, not complications.</h1><p class="lead">Send and receive files over your local network. Choose the browser bridge for zero PC installation or the optional Windows Companion for a dedicated desktop experience.</p>
-<section class="download-banner" aria-label="Windows Companion installation">
-<div><span class="kicker">DirectBeam for Windows</span><h2>Windows Companion</h2><p>Move files between Android and Windows with secure local pairing, a dedicated file browser and batch transfers. Find the official installation instructions here.</p></div>
-<div class="download-actions"><a class="link" href="./windows.html" aria-label="Install Windows Companion, open official installation page">Install Windows Companion &rarr;</a><span class="small-note">Public installer not yet available. This opens the official setup page, not an executable download.</span><a class="secondary-link" href="./windows.html">Setup guide and release status</a></div>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DirectBeam: File Transfer — Android, iPhone and PC Local Transfer</title>
+<meta name="description" content="Official website for DirectBeam: File Transfer. Transfer files locally between Android devices, iPhone, iPad, Mac and PC without a DirectBeam account or cloud storage.">
+<meta name="theme-color" content="#07111f">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="DirectBeam: File Transfer">
+<meta property="og:description" content="Android, iPhone and PC local file transfer. No account. No DirectBeam cloud storage.">
+<meta property="og:type" content="website">
+
+<style>
+:root{
+  --bg:#07111f;
+  --panel:#0e1b2d;
+  --panel2:#12233a;
+  --text:#eef6ff;
+  --muted:#a9bdd2;
+  --accent:#59d8ff;
+  --accent2:#6d7cff;
+  --line:#203954;
+  --ok:#69e6b3;
+  --warning:#ffd36a;
+  --max:1080px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  background:radial-gradient(circle at 15% 0%,#102d49 0,#07111f 38%),var(--bg);
+  color:var(--text);
+  line-height:1.65
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(7,17,31,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)
+}
+.nav-inner{
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px
+}
+.brand{
+  font-weight:850;
+  letter-spacing:.2px;
+  color:#fff;
+  font-size:1.08rem
+}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;flex-wrap:wrap;gap:18px;font-size:.94rem}
+
+.hero{padding:86px 0 54px}
+.badge{
+  display:inline-block;
+  border:1px solid #2c6680;
+  background:#0d2838;
+  color:#9beaff;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:.84rem;
+  font-weight:750
+}
+h1{
+  font-size:clamp(2.2rem,6vw,4.7rem);
+  line-height:1.05;
+  margin:18px 0
+}
+h1 span{color:var(--accent)}
+h2{font-size:1.65rem;margin:42px 0 12px}
+h3{font-size:1.12rem;margin:26px 0 8px}
+.lead{max-width:820px;font-size:1.14rem;color:var(--muted)}
+.hero-points{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:24px
+}
+.pill{
+  border:1px solid var(--line);
+  background:rgba(12,26,42,.9);
+  border-radius:999px;
+  padding:8px 13px;
+  color:#d9ecff;
+  font-size:.9rem
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin:38px 0
+}
+.card,.content{
+  background:linear-gradient(180deg,rgba(18,35,58,.94),rgba(12,25,42,.94));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:24px;
+  box-shadow:0 18px 50px rgba(0,0,0,.18)
+}
+.card h3{margin-top:0}
+.card p{color:var(--muted);margin-bottom:0}
+.card strong{color:#fff}
+.content{margin:34px 0 64px;padding:clamp(22px,4vw,48px)}
+
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:800
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#06111d
+}
+.btn-secondary{
+  border:1px solid var(--line);
+  background:#0c1a2a;
+  color:#fff
+}
+
+.note{
+  border-left:4px solid var(--accent);
+  background:#0b2032;
+  padding:14px 18px;
+  border-radius:8px;
+  margin:22px 0
+}
+.ok{border-left-color:var(--ok)}
+.warning{border-left-color:var(--warning)}
+ul{padding-left:22px}
+li{margin:8px 0}
+.small{color:var(--muted);font-size:.92rem}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:28px 0 44px;
+  color:var(--muted);
+  font-size:.9rem
+}
+code{
+  background:#091827;
+  border:1px solid var(--line);
+  padding:2px 6px;
+  border-radius:6px
+}
+
+@media(max-width:800px){
+  .grid{grid-template-columns:1fr}
+  .nav-inner{
+    align-items:flex-start;
+    padding:14px 0;
+    flex-direction:column
+  }
+  .hero{padding-top:54px}
+}
+.brand{display:inline-flex;align-items:center;gap:9px}
+.brand-icon{display:block;width:42px;height:42px;object-fit:cover;border-radius:12px;box-shadow:0 7px 25px #35b8ec33;transition:transform .25s ease}
+.brand:hover .brand-icon{transform:scale(1.07)}
+.hero-icon-wrap{position:relative;width:108px;height:108px;margin:0 0 22px}
+.hero-icon{width:108px;height:108px;display:block;object-fit:cover;border-radius:26px;box-shadow:0 20px 60px #0d75bf44;animation:beamFloat 6s ease-in-out infinite}
+.card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 25px 60px #0005;border-color:#57c5eb88}
+.btn{transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 12px 26px #0004}
+a:focus-visible{outline:3px solid #ffda85;outline-offset:4px}
+@keyframes beamFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important;transform:none!important}}
+
+/* Original Google Play screenshots gallery: responsive, keyboard and touch accessible */
+.qfs-gallery{--qfs-glow:#88e5fa;clear:both;width:100%;max-width:100%;min-width:0;margin:46px 0 58px;padding:clamp(19px,3vw,30px);background:linear-gradient(150deg,rgba(25,34,58,.79),rgba(12,18,35,.82));border:1px solid rgba(193,205,244,.2);border-radius:23px;box-shadow:0 15px 42px rgba(0,0,0,.15);color:#f4f8ff;text-align:left}
+.qfs-gallery *{box-sizing:border-box}
+.qfs-gallery-top{display:flex;gap:15px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}
+.qfs-gallery-label{display:block;color:var(--qfs-glow);font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;font-weight:850;margin-bottom:7px}
+.qfs-gallery h2{font-size:clamp(1.42rem,2.8vw,2.1rem);line-height:1.2;letter-spacing:-.03em;margin:0 0 10px;color:#fff}
+.qfs-gallery-description{margin:0;color:#c4cede;font-size:.94rem;max-width:690px;line-height:1.7}
+.qfs-gallery-controls{display:flex;gap:9px;flex-shrink:0}
+.qfs-gallery button{appearance:none;cursor:pointer;width:43px;height:43px;border:1px solid rgba(210,226,255,.3);border-radius:12px;background:rgba(130,168,229,.13);color:#f6faff;font:700 1.2rem/1 system-ui,sans-serif;transition:background .2s,transform .2s}
+.qfs-gallery button:hover{background:rgba(146,201,242,.24);transform:translateY(-2px)}
+.qfs-gallery button:focus-visible,.qfs-gallery a:focus-visible{outline:3px solid #ffdc91;outline-offset:3px}
+.qfs-gallery-track{display:flex;gap:16px;width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scroll-padding-inline:4px;padding:5px 4px 19px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#778db4 transparent}
+.qfs-gallery-track:focus-visible{outline:2px solid var(--qfs-glow);outline-offset:-1px;border-radius:10px}
+.qfs-gallery-shot{flex:0 0 clamp(175px,22vw,234px);min-width:0;margin:0;scroll-snap-align:start;position:relative}
+.qfs-gallery-shot a{display:block;border-radius:18px;overflow:hidden;background:#090c1b;border:1px solid rgba(194,215,255,.27);box-shadow:0 12px 30px rgba(0,0,0,.3);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.qfs-gallery-shot a:hover{transform:translateY(-4px);box-shadow:0 18px 35px rgba(0,0,0,.4);border-color:var(--qfs-glow)}
+.qfs-gallery-shot img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:linear-gradient(135deg,#122137,#0a0a18)}
+.qfs-gallery-shot figcaption{color:#d8e3f8;font-weight:670;font-size:.83rem;line-height:1.45;margin-top:11px;min-height:2.2em}
+.qfs-gallery-hint{color:#97aac6;font-size:.77rem;margin:4px 0 0;line-height:1.4}
+@media(max-width:720px){.qfs-gallery{padding:17px;margin:32px 0 42px;border-radius:19px}.qfs-gallery-track{gap:12px}.qfs-gallery-shot{flex-basis:clamp(164px,53vw,215px)}.qfs-gallery-top{align-items:flex-start}.qfs-gallery h2{font-size:1.5rem}}
+@media(prefers-reduced-motion:reduce){.qfs-gallery button,.qfs-gallery-shot a{transition:none!important;transform:none!important}.qfs-gallery-track{scroll-behavior:auto!important}}
+
+/* Windows Companion prominent launch panel, 2026-11-09 */
+.windows-companion-feature{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr);gap:25px;align-items:center;padding:clamp(22px,4vw,36px);margin:28px 0 40px;border:1px solid rgba(89,216,255,.5);border-radius:23px;background:radial-gradient(circle at 90% 5%,rgba(155,123,255,.22),transparent 48%),linear-gradient(120deg,#11263d,#151b33 75%);box-shadow:0 19px 52px rgba(0,0,0,.22)}
+.windows-companion-feature h2{font-size:clamp(26px,3.3vw,36px);margin:8px 0 12px;letter-spacing:-.035em;color:#f8faff}
+.windows-companion-feature p{color:#bdcfe2;margin:0 0 12px}
+.windows-companion-feature .release-note{font-size:.88rem;color:#aabdd0;margin-bottom:0}
+.windows-eyebrow{color:#42e8ff;font-size:12px;letter-spacing:.14em;font-weight:800}
+.windows-action{display:grid;gap:12px;text-align:center}
+.windows-action .btn{padding:15px 16px;display:block;text-decoration:none;white-space:normal}
+.windows-action small{color:#bbcee1;font-size:12px;line-height:1.5}
+@media(max-width:760px){.windows-companion-feature{grid-template-columns:1fr}.windows-action{text-align:left}}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><img class="brand-icon" src="https://play-lh.googleusercontent.com/yA0eCNGCP8iwyPnvoc7XECDZReeQOPjFHlIO_jgY5SolQcJEFQyx1HNsQKF4YPdQElkXKyo-wxKaUsLnOiGhuEo=w240-h480" width="42" height="42" alt="">Direct<span>Beam</span></a>
+
+
+<div class="nav-links"><a href="https://quizfansstudio.github.io/">All apps</a>
+  <a href="index.html">Home</a>
+  <a href="windows.html">Windows Companion</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+  <a href="https://quizfansstudio.github.io/Data-Deletion-Request/">Data controls</a>
+</div>
+
+
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-icon-wrap"><img class="hero-icon" src="https://play-lh.googleusercontent.com/yA0eCNGCP8iwyPnvoc7XECDZReeQOPjFHlIO_jgY5SolQcJEFQyx1HNsQKF4YPdQElkXKyo-wxKaUsLnOiGhuEo=w240-h480" width="108" height="108" alt="Official DirectBeam icon from Google Play"></div>
+    <span class="badge">FAST · PRIVATE · LOCAL</span>
+
+
+<h1>
+  DirectBeam:<br>
+  <span>File Transfer</span>
+</h1>
+
+<p class="lead">
+  Transfer photos, videos, documents, music, archives and other files between
+  Android devices, iPhone, iPad, Mac and PC. No DirectBeam account, no desktop
+  program for browser transfers and no DirectBeam cloud storage.
+</p>
+
+<div class="hero-points">
+  <span class="pill">Android to Android</span>
+  <span class="pill">iPhone and iPad via Safari</span>
+  <span class="pill">Mac and PC browser transfer</span>
+  <span class="pill">Group Beam</span>
+  <span class="pill">Secure Transport V6</span>
+</div>
+
+<div class="btns">
+  <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.quizfans.directbeam">Get DirectBeam on Google Play ↗</a>
+  <a class="btn btn-secondary" href="windows.html">Windows Companion · Installation ↗</a>
+  <a class="btn btn-secondary" href="privacy.html">Read Privacy Policy</a>
+  <a class="btn btn-secondary" href="terms.html">Read Terms</a>
+  <a class="btn btn-secondary" href="https://quizfansstudio.github.io/Data-Deletion-Request/">Data controls</a>
+</div>
+
+
+  </div>
+</header>
+
+<main class="wrap">
+<section class="windows-companion-feature" aria-labelledby="windows-companion-title">
+  <div>
+    <span class="windows-eyebrow">NEW · DESKTOP TRANSFER</span>
+    <h2 id="windows-companion-title">Windows Companion</h2>
+    <p>Pair your Android phone with Windows to securely send files, browse authorized folders and receive batches of files. No cloud account required.</p>
+    <p class="release-note">The public Windows Companion 2.3.4 installer is available from our verified official GitHub release. The newer multilingual desktop QA build is not yet published as an installer. See the Windows page for download checksums, pairing instructions, privacy details and Free/Pro requirements.</p>
+  </div>
+  <div class="windows-action">
+    <a class="btn btn-primary" href="windows.html">Windows Companion · Download &amp; Setup ↗</a>
+    <small>Official installation page · Windows download pending release</small>
+  </div>
 </section>
-<div class="grid"><section class="card"><h2>PC Connect • Browser</h2><p>Nothing to install on Windows. On Android, open DirectBeam → PC Connect, start the session, then enter the shown browser URL in Edge or Chrome on the same trusted LAN.</p><p><strong>Note:</strong> browser mode uses local HTTP; use a private, trusted network.</p></section><section class="card"><h2>Windows Companion</h2><p>Dedicated Windows application with local HTTPS, device pairing, drag-and-drop and file browsing.</p><a class="link" href="./windows.html">Windows installation guide</a></section></div>
-<p><a href="../">← Back to Quiz Fun Studio apps</a></p></main><footer>DirectBeam uses your local network. No public cloud relay is required for these transfer modes.</footer></body></html>
+
+
+<section class="grid">
+
+  <article class="card">
+    <h3>Android to Android</h3>
+    <p>
+      Transfer selected files directly between compatible Android phones and
+      tablets. Supported sessions use Secure Transport V6 with authenticated
+      AES-256-GCM encryption and integrity verification.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>Apple &amp; Web Transfer</h3>
+    <p>
+      Transfer files between Android and iPhone, iPad, Mac or another
+      browser-enabled device. Scan the QR code and open the temporary local
+      session in Safari or another compatible browser.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>PC Connect</h3>
+    <p>
+      Upload or download authorized files through a browser on the same trusted
+      Wi-Fi network. No cable or desktop application is required.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>Group Beam</h3>
+    <p>
+      Send selected files to multiple compatible nearby receivers and monitor
+      progress separately for each connected device.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>Resume and integrity</h3>
+    <p>
+      Supported interrupted transfers can resume without restarting every
+      completed part. File integrity checks help detect incomplete or altered
+      transfer results.
+    </p>
+  </article>
+
+  <article class="card">
+    <h3>No DirectBeam cloud</h3>
+    <p>
+      Files selected for local transfer are exchanged between devices chosen by
+      the user and are not uploaded to a cloud-storage server operated by
+      DirectBeam.
+    </p>
+  </article>
+
+</section>
+
+
+<section class="qfs-gallery" id="screenshots-directbeam" style="--qfs-glow:#77e6ff" aria-labelledby="screenshots-title-directbeam">
+ <div class="qfs-gallery-top">
+  <div><span class="qfs-gallery-label">Official Google Play screenshots</span>
+   <h2 id="screenshots-title-directbeam">File transfers, step by step</h2>
+   <p class="qfs-gallery-description">Explore real DirectBeam screenshots for Android, iPhone, iPad and computer transfer workflows.</p>
+  </div>
+  <div class="qfs-gallery-controls" aria-label="Gallery navigation">
+   <button type="button" data-qfs-scroll="prev" aria-label="Scroll screenshots left">←</button>
+   <button type="button" data-qfs-scroll="next" aria-label="Scroll screenshots right">→</button>
+  </div>
+ </div>
+ <div class="qfs-gallery-track" role="group" aria-label="Four original Google Play screenshots" tabindex="0">
+  <figure class="qfs-gallery-shot"><a href="https://play-lh.googleusercontent.com/r9i6-vZAYIEyXv5Q5hfow3Wbj166sRo3m_TWDGXNLRfDLh162uD3J3tZurX0bQ8_4sh2-aRgAvimCsuBRVsm2w=w526-h296" rel="noopener noreferrer" target="_blank" aria-label="Open full screenshot: Android, iPhone and PC"><img src="https://play-lh.googleusercontent.com/r9i6-vZAYIEyXv5Q5hfow3Wbj166sRo3m_TWDGXNLRfDLh162uD3J3tZurX0bQ8_4sh2-aRgAvimCsuBRVsm2w=w526-h296" loading="lazy" decoding="async" alt="Android, iPhone and PC, official screenshot 1 of 4" width="234" height="416"></a><figcaption>Android, iPhone and PC</figcaption></figure>
+  <figure class="qfs-gallery-shot"><a href="https://play-lh.googleusercontent.com/h1DS_2mo7vXpiPcNcDjV20muuqyFbsDBTMzH_AnE_eVb7CoA30KjyEsM5rN8Lguu0DkawA9--olMUOqg-yLyPw=w526-h296" rel="noopener noreferrer" target="_blank" aria-label="Open full screenshot: Transfer to iPhone"><img src="https://play-lh.googleusercontent.com/h1DS_2mo7vXpiPcNcDjV20muuqyFbsDBTMzH_AnE_eVb7CoA30KjyEsM5rN8Lguu0DkawA9--olMUOqg-yLyPw=w526-h296" loading="lazy" decoding="async" alt="Transfer to iPhone, official screenshot 2 of 4" width="234" height="416"></a><figcaption>Transfer to iPhone</figcaption></figure>
+  <figure class="qfs-gallery-shot"><a href="https://play-lh.googleusercontent.com/WaziAtet4h1WRPfrq0wL1gQJ2Dp3E3bKaONgzNk3XQL2e3RJ_X472yg-4m09l4sPHCPSRBTouUVSw4byX6iSRA=w526-h296" rel="noopener noreferrer" target="_blank" aria-label="Open full screenshot: iPhone to Android"><img src="https://play-lh.googleusercontent.com/WaziAtet4h1WRPfrq0wL1gQJ2Dp3E3bKaONgzNk3XQL2e3RJ_X472yg-4m09l4sPHCPSRBTouUVSw4byX6iSRA=w526-h296" loading="lazy" decoding="async" alt="iPhone to Android, official screenshot 3 of 4" width="234" height="416"></a><figcaption>iPhone to Android</figcaption></figure>
+  <figure class="qfs-gallery-shot"><a href="https://play-lh.googleusercontent.com/SlRJi_xxp92YIS7x7DOjVNSkqne2k-jVZS8XVUyE8oNEsiwWkfP7EdOPEGLC0UBO7T-NljeXIjy6JX2WoOnv7Q=w526-h296" rel="noopener noreferrer" target="_blank" aria-label="Open full screenshot: PC Connect"><img src="https://play-lh.googleusercontent.com/SlRJi_xxp92YIS7x7DOjVNSkqne2k-jVZS8XVUyE8oNEsiwWkfP7EdOPEGLC0UBO7T-NljeXIjy6JX2WoOnv7Q=w526-h296" loading="lazy" decoding="async" alt="PC Connect, official screenshot 4 of 4" width="234" height="416"></a><figcaption>PC Connect</figcaption></figure>
+ </div>
+ <p class="qfs-gallery-hint">Swipe to explore more screenshots or use the arrows. Select a screenshot to view it separately.</p>
+</section>
+<section class="content">
+
+  <h2>Local browser transfer for Apple devices</h2>
+
+  <p>
+    DirectBeam can temporarily turn the Android device into a local transfer
+    host. An iPhone, iPad, Mac, PC or other compatible device can connect by
+    scanning the QR code or opening the displayed local address.
+  </p>
+
+  <ul>
+    <li>Use the same trusted Wi-Fi network or a DirectBeam local-only hotspot.</li>
+    <li>Open the transfer page in Safari or another compatible browser.</li>
+    <li>Select files on the sending device or download files authorized on Android.</li>
+    <li>No DirectBeam application is required on the browser device.</li>
+    <li>No internet connection is required when using the local-only transfer path.</li>
+  </ul>
+
+  <div class="note warning">
+    <strong>Browser-transfer security:</strong>
+    Apple &amp; Web Transfer and PC Connect use a temporary authenticated local
+    HTTP session. They do not use the same end-to-end encryption model as
+    supported Android-to-Android Secure Transport V6 sessions. Use browser
+    transfer only on a trusted private network and do not share the QR code,
+    local address or session token with unauthorized persons.
+  </div>
+
+  <h2>Built around user control</h2>
+
+  <p>
+    You choose the files, folders and devices involved in every transfer.
+    DirectBeam uses Android permissions and system file pickers so that access
+    can be authorized only when required for a selected feature.
+  </p>
+
+  <div class="note ok">
+    <strong>Important:</strong>
+    DirectBeam does not require a DirectBeam account and does not operate a
+    DirectBeam cloud-storage service for the files you select for local transfer.
+  </div>
+
+  <h2>Core functions</h2>
+
+  <ul>
+    <li>Send and receive files between compatible Android devices.</li>
+    <li>Wi-Fi Direct and compatible local-network transfer methods.</li>
+    <li>Apple &amp; Web Transfer for iPhone, iPad, Mac and browsers.</li>
+    <li>Optional local-only hotspot for transfers without internet access.</li>
+    <li>Group Beam for supported multi-device transfers.</li>
+    <li>PC Connect for local browser-based file exchange.</li>
+    <li>Live progress, supported resume and integrity verification.</li>
+    <li>Transfer history and local diagnostics.</li>
+    <li>Optional DirectBeam Pro features through Google Play Billing.</li>
+  </ul>
+
+  <h2>Support and legal information</h2>
+
+  <p>
+    For privacy questions, legal requests or application support, email
+    <a href="mailto:quizfans.studio@gmail.com">quizfans.studio@gmail.com</a>.
+  </p>
+
+  <div class="btns">
+    <a class="btn btn-secondary" href="privacy.html">Privacy Policy</a>
+    <a class="btn btn-secondary" href="terms.html">Terms of Service</a>
+    <a class="btn btn-secondary" href="https://quizfansstudio.github.io/Data-Deletion-Request/">Data Deletion and Controls</a>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>DirectBeam: File Transfer</strong><br>
+    No account. No DirectBeam cloud. Local transfer.<br><br>
+
+
+<a href="mailto:quizfans.studio@gmail.com">quizfans.studio@gmail.com</a>
+<span> · </span>
+<a href="privacy.html">Privacy Policy</a>
+<span> · </span>
+<a href="terms.html">Terms of Service</a>
+<span> · </span>
+<a href="https://quizfansstudio.github.io/Data-Deletion-Request/">Data Controls</a>
+
+<p>© 2026 DirectBeam. All rights reserved.</p>
+
+
+  </div>
+</footer>
+
+
+<script>
+/* Clickable gallery arrows; touch swipes and keyboard scrolling also work. */
+document.querySelectorAll(".qfs-gallery").forEach(function(section){
+  var rail=section.querySelector(".qfs-gallery-track");
+  if(!rail)return;
+  var reduced=window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  section.querySelectorAll("[data-qfs-scroll]").forEach(function(button){
+    button.addEventListener("click",function(){
+      var direction=button.getAttribute("data-qfs-scroll")==="prev"?-1:1;
+      var width=rail.querySelector(".qfs-gallery-shot")?.getBoundingClientRect().width || 210;
+      rail.scrollBy({left:direction*(width+16)*2,behavior:reduced?"auto":"smooth"});
+    });
+  });
+});
+</script>
+</body>
+</html>
