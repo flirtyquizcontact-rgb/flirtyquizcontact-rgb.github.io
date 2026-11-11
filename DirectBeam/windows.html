@@ -77,14 +77,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <div class="eyeline">Get the official desktop app</div>
 <h2 id="download-heading">Download Windows Companion</h2>
 <p id="release-summary">DirectBeam Companion V2.3.4 for Windows x64 is available from the official GitHub release. Follow the setup instructions below to connect your Android phone.</p>
-<p class="small">The public installer is <strong>Windows Companion 2.3.4</strong>. A newer six-language desktop interface has passed local QA but is <strong>not yet included</strong> in this published installer. Check the release version before installing.</p>
+<p class="small" id="release-availability">The verified public installer is Windows Companion 2.3.4. The newer six-language 2.3.5 build is locally tested but not public yet. The page updates when GitHub publishes the exact verified installer.</p>
 <div id="release-status" class="status ready" role="status" aria-live="polite">Windows installer available · V2.3.4</div>
 </div>
 <div class="cta-panel">
 <a id="installer-download" class="btn" href="https://github.com/QuizFansStudio/DirectBeam/releases/download/windows-companion-v2.3.4/DirectBeam_Companion_Setup_x64.exe" rel="noopener noreferrer">Download for Windows (x64)</a>
 <div id="installer-details" class="download-meta">V2.3.4 · 49.6 MiB · SHA-256: 55D6D98C1C41ADF5607179CE101D2FBFBC9E0AF66DA3BBC65792D3465F5DD40C</div>
 <a class="btn secondary" href="https://github.com/QuizFansStudio/DirectBeam/releases" rel="noopener noreferrer">View official GitHub releases</a>
-<p class="small"><strong>Verified SHA-256 of Windows Companion 2.3.4 installer:</strong> <code>55d6d98c1c41adf5607179ce101d2fbfbc9e0af66da3bbc65792d3465f5dd40c</code>. This checksum is specific to the 2.3.4 installer, not future releases. For a newer installer, verify the hash shown in its own release notes.</p>
+<p class="small" id="installer-checksum-note"><strong>Verified public installer SHA-256 (2.3.4):</strong> <code>55d6d98c1c41adf5607179ce101d2fbfbc9e0af66da3bbc65792d3465f5dd40c</code>. Verify the file hash before installation; the website will display the new hash only after GitHub confirms an approved release.</p>
 <p class="small" id="download-note">Installer verified against the public GitHub release. This installer is not Authenticode-signed; Windows SmartScreen may warn. Verify its SHA-256 before running. Do not download from unofficial sources.</p>
 </div>
 </section>
@@ -134,6 +134,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   const api = "https://api.github.com/repos/QuizFansStudio/DirectBeam/releases/latest";
   const officialAssetName = "DirectBeam_Companion_Setup_x64.exe";
   const downloadPrefix = "https://github.com/QuizFansStudio/DirectBeam/releases/download/";
+  const availability = document.getElementById("release-availability");
+  const checksumNote = document.getElementById("installer-checksum-note");
+  // Keep both domains synchronized and permit only verified, independently hashed release assets.
+  const approvedSha = Object.freeze({
+    "windows-companion-v2.3.4": "55d6d98c1c41adf5607179ce101d2fbfbc9e0af66da3bbc65792d3465f5dd40c",
+    "windows-companion-v2.3.5": "a40e41665777cf0d3947756878699bd5ac9f94ee69c06723d69447694cf71ee7"
+  });
   try {
     const response = await fetch(api, {headers:{"Accept":"application/vnd.github+json"}});
     if (response.status === 404) {
@@ -153,15 +160,25 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       // Retain the verified V2.3.4 direct-download fallback.
       return;
     }
+    const tag = typeof release.tag_name === "string" ? release.tag_name : "";
+    const trustedSha = Object.prototype.hasOwnProperty.call(approvedSha, tag) ? approvedSha[tag] : null;
+    const actualDigest = typeof asset.digest === "string" ? asset.digest.toLowerCase() : "";
+    if (!trustedSha || actualDigest !== "sha256:" + trustedSha) {
+      // Never advertise an unpublished, unknown or mismatched binary as verified.
+      return;
+    }
     button.href = asset.browser_download_url;
     button.removeAttribute("hidden");
-    status.textContent = "Windows installer available";
+    const versionLabel = tag === "windows-companion-v2.3.5" ? "2.3.5" : "2.3.4";
+    status.textContent = "Windows installer available · V" + versionLabel;
     status.classList.add("ready");
-    summary.textContent = "Official Windows Companion release is ready to download. Install on Windows and follow the six steps below.";
-    const version = typeof release.tag_name === "string" ? release.tag_name : "";
+    summary.textContent = "DirectBeam Companion " + versionLabel + " for Windows x64 is available from our verified GitHub release. Follow the setup guide below.";
     const mb = (asset.size / 1048576).toFixed(1);
-    const digest = typeof asset.digest === "string" && /^sha256:[0-9a-f]{64}$/i.test(asset.digest) ? asset.digest : "";
-    meta.textContent = (version ? "Release " + version + " · " : "") + mb + " MiB" + (digest ? " · SHA-256 " + digest.slice(7).toUpperCase() : "");
+    meta.textContent = "V" + versionLabel + " · " + mb + " MiB · SHA-256: " + trustedSha.toUpperCase();
+    availability.textContent = versionLabel === "2.3.5"
+      ? "The verified Windows Companion 2.3.5 installer includes the six-language interface (English, Romanian, French, Spanish, German and Italian) and translated Connection Guide."
+      : "The public installer is Windows Companion 2.3.4. The newer six-language 2.3.5 version is not published on GitHub yet.";
+    checksumNote.textContent = "Verified public installer SHA-256 (V" + versionLabel + "): " + trustedSha.toUpperCase() + ". Check this hash against the downloaded installer before running it.";
     meta.removeAttribute("hidden");
   } catch (_) {
     // Retain the verified V2.3.4 direct-download fallback if the GitHub API is unavailable.
