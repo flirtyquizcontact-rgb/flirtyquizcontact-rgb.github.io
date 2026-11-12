@@ -157,6 +157,16 @@ h1,h2,h3,p{margin-top:0}
 .qfs-social-pill[href]:focus-visible{outline:3px solid #8eeeff;outline-offset:3px}
 .qfs-social-pill:not([href]){cursor:default}
 
+
+/* QFS 2026-11-12: no overflowing CTAs on small screens */
+.container,.app-card,.app-top,.app-identity,.app-bottom,.app-actions,.header-content,.top-nav,.qfs-footer-grid{min-width:0;max-width:100%}
+.app-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,145px),1fr));gap:9px}
+.app-actions .action{display:inline-flex;align-items:center;justify-content:center;min-width:0;width:100%;max-width:100%;min-height:44px;text-align:center;white-space:normal;overflow-wrap:anywhere;line-height:1.3;padding:9px 10px}
+.app-actions .action-play{margin-left:0}
+.hero-cta .cta,.info-actions a,.qfs-social-pill{max-width:100%;min-width:0;overflow-wrap:anywhere;white-space:normal;text-align:center;line-height:1.35}
+.app-identity h3,.app-description,.wordmark,.package,.footer-inner,.top-nav a{overflow-wrap:anywhere}
+@media(max-width:560px){.app-actions{grid-template-columns:repeat(2,minmax(0,1fr))}.app-actions .action-play{grid-column:1/-1}.hero-cta{display:grid;grid-template-columns:minmax(0,1fr)}.hero-cta .cta{width:100%}.info-actions{display:grid;grid-template-columns:minmax(0,1fr)}.info-actions a{text-align:center}.top-nav{gap:8px 12px}}
+@media(max-width:360px){.app-actions{grid-template-columns:minmax(0,1fr)}.app-actions .action-play{grid-column:auto}.container{width:calc(100% - 22px)}.app-card{padding:18px 13px}}
 </style>
 </head>
 <body>
