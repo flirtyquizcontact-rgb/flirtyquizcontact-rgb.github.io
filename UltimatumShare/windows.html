@@ -54,12 +54,12 @@ a{color:var(--cyan)}.wrap{width:min(1080px,92%);margin:auto;padding:24px 0 58px}
 <div class="tags"><span>Windows desktop · x64</span><span>Pair by QR - Easy</span><span>Phone approval</span><span>Rich file previews</span><span>Local network transfers</span></div></section>
 <section class="panel download" id="download" aria-labelledby="download-title">
 <h2 id="download-title">Download Windows Companion</h2>
-<p id="release-description">Checking the latest public GitHub Release and SHA-256 installer digest. The latest version includes PC QR pairing and rich previews.</p>
+<p id="release-description">Checking the latest official Windows Companion release with QR pairing and rich file previews.</p>
 <div id="release-status" class="status" role="status" aria-live="polite">Verifying official download...</div>
 <a id="download-link" class="btn" href="#" hidden target="_blank" rel="noopener noreferrer">Download for Windows (x64)</a>
 <a class="btn secondary" href="https://github.com/QuizFansStudio/ultimatum-flash/releases" rel="noopener noreferrer">Official GitHub Releases</a>
-<div id="release-details" class="meta">Installer: UltimatumCompanionSetup.exe | SHA-256 verified against official GitHub Release metadata.</div>
-<p class="small">Download buttons activate only for GitHub assets matching the release SHA-256. The Windows installer is not Authenticode-signed and can show an unknown publisher warning. Do not disable security protections to install untrusted software.</p>
+<div id="release-details" class="meta">Installer: UltimatumCompanionSetup.exe | Checking official release details.</div>
+<p class="small">The download button appears only after checking the official GitHub release. The Windows installer is not digitally signed by a verified publisher and can show an unknown publisher warning. Do not disable Windows security protections for untrusted software.</p>
 </section>
 <section id="setup" class="panel">
 <div class="eyebrow">Easy connection - QR pairing</div>
@@ -112,7 +112,7 @@ a{color:var(--cyan)}.wrap{width:min(1080px,92%);margin:auto;padding:24px 0 58px}
 <details><summary>Where do I press Approve?</summary><p>After scanning, open the Android <strong>PC Connect</strong> screen and look near the <strong>top</strong> for the pending computer request. Select the green <strong>APPROVE &amp; CONNECT</strong> button or <strong>Deny</strong>. The PC remains unauthorized until you approve it.</p></details>
 <details><summary>Windows cannot discover the phone</summary><p>Use <strong>Find phone</strong> or the copied-link/manual address fallback. Check PC firewall, guest-network isolation and whether Android PC Bridge is running. A phone hotspot can work if devices may communicate locally.</p></details>
 <details><summary>Video or document preview will not open</summary><p>Video and audio depend on Windows codecs. DOCX previews text only. PDF, XLSX and PPTX open through a suitable Windows application after confirmation. Preview size limits apply. Use <strong>Save selected</strong> when preview is not supported.</p></details>
-<details><summary>Windows shows an unknown publisher</summary><p>The current Windows installer is <strong>not Authenticode-signed</strong>. Verify that you downloaded it from our official GitHub Release and compare its SHA-256. Do not disable security protections for unknown or untrusted software.</p></details>
+<details><summary>Windows shows an unknown publisher</summary><p>The current Windows installer is <strong>not Authenticode-signed</strong>. Download it only from our official GitHub Release. Do not disable security protections for unknown or untrusted software.</p></details>
 <details><summary>Why is the legacy installer shown?</summary><p>If the latest release is not yet verified on GitHub, the page may offer the older v1.0.0 installer explicitly labelled <strong>Legacy</strong>. That release does not include the new Windows QR pairing and rich preview. Return once the latest verified release is available.</p></details>
 <p class="small">Support: <a href="mailto:quizfans.studio@gmail.com">quizfans.studio@gmail.com</a></p></section>
 </main>
@@ -156,14 +156,14 @@ a{color:var(--cyan)}.wrap{width:min(1080px,92%);margin:auto;padding:24px 0 58px}
         description.textContent=release.latest
           ?"Latest Windows Companion includes Pair by QR - Easy and richer document and media previews. Compatible Android 2.0.16 or newer is needed for QR pairing."
           :"The newest QR-enabled installer is not yet verified on GitHub. This older installer supports manual and Find phone connections, but not PC-screen QR pairing or rich previews.";
-        details.textContent=assetName+" | "+(asset.size/1048576).toFixed(1)+" MiB | SHA-256: "+release.sha.toUpperCase()+" | "+release.tag;
+        details.textContent=assetName+" | "+(asset.size/1048576).toFixed(1)+" MiB | "+release.tag;
         return;
       }catch(e){/* Safely check the next known, versioned release. */}
     }
     button.hidden=true;
     status.textContent="No verified installer currently available";
     description.textContent="Please use Official GitHub Releases and check back for a verified installer.";
-    details.textContent="Downloads appear only after public asset digest verification.";
+    details.textContent="Downloads appear only after official release verification.";
   }
   load();
 })();
