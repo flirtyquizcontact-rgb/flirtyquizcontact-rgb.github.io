@@ -13,6 +13,15 @@
 a{color:var(--cyan)}.wrap{width:min(1080px,92%);margin:auto;padding:24px 0 58px}.top{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}.brand{font-weight:850;color:var(--text);text-decoration:none;font-size:17px}.nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}.hero{padding:70px 0 25px}.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);font-weight:850}h1{font-size:clamp(37px,6vw,66px);line-height:1.08;letter-spacing:-.045em;margin:14px 0}h1 span{color:var(--cyan)}h2{font-size:25px;line-height:1.25;margin:0 0 10px}h3{font-size:17px;margin:0 0 8px}.lead{font-size:clamp(17px,2vw,21px);max-width:830px;color:#d6e5f5}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:23px 0}.tags span{font-size:12px;font-weight:750;border:1px solid var(--stroke);background:#16263b;border-radius:30px;padding:6px 12px}
 .panel{background:linear-gradient(130deg,#162944,#101b34);border:1px solid var(--stroke);border-radius:20px;padding:clamp(20px,3vw,30px);margin:18px 0}.download{border-color:#3b8a9c}.panel p{color:var(--muted);margin:8px 0}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:800;color:#06101d;background:var(--cyan);border:1px solid var(--cyan);border-radius:11px;padding:11px 18px;margin:8px 10px 8px 0}.btn.secondary{background:transparent;color:var(--text);border-color:#5683a1}.btn[hidden]{display:none}.meta{font:12px/1.6 ui-monospace,Consolas,monospace;overflow-wrap:anywhere;color:#c5e0f2}.status{font-weight:800;color:#ffe3a8;border-left:3px solid #ffcf79;background:#2b2b32;padding:9px 14px;border-radius:6px;margin:14px 0}.status.ready{color:#d3ffe9;border-color:#73efbe;background:#163c35}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{padding:18px;background:#111e34;border:1px solid var(--stroke);border-radius:16px}.card p{font-size:14px;margin:0;color:var(--muted)}ol{padding-left:25px;color:var(--muted)}li{margin:9px 0}strong{color:#fff}.note{border-left:3px solid var(--gold);padding:12px 16px;background:#2a2835;border-radius:8px;color:#e4d7b8}details{padding:14px 0;border-bottom:1px solid var(--stroke)}summary{cursor:pointer;font-weight:750}details p{margin:9px 0 0}.small{font-size:13px;color:var(--muted)}footer{margin-top:36px;padding:23px 0;border-top:1px solid var(--stroke);font-size:13px;color:#98b3cd}code{font-size:.9em;overflow-wrap:anywhere}
 @media(max-width:800px){.grid,.cards{grid-template-columns:1fr}.hero{padding-top:40px}.nav{gap:10px}}
+
+/* Ultimatum first-run guidance: kept separate from future QR-pairing claims. */
+#first-connection{border-color:#3982a3}
+#first-connection .grid{margin:17px 0}
+#first-connection .card{min-width:0}
+#first-connection .card h3{color:#d9f8ff}
+#first-connection .card p{color:#c2d4e6}
+#first-connection .note{margin:22px 0 13px;color:#ffecbf}
+
 </style>
 </head>
 <body><div class="wrap">
@@ -34,10 +43,27 @@ a{color:var(--cyan)}.wrap{width:min(1080px,92%);margin:auto;padding:24px 0 58px}
 <ol><li>Install or update <a href="https://play.google.com/store/apps/details?id=com.ultimatum.flashshare">Ultimatum on Android</a>.</li>
 <li>When available, download Windows Companion from the verified official release above and install it.</li>
 <li>Connect the phone and PC to the same trusted local network (a wired PC and Wi-Fi phone can work on the same LAN).</li>
-<li>On Android, open <strong>PC Bridge → Start</strong>. Keep the session running.</li>
+<li>On Android, find <strong>PC Connect</strong>, open it, and choose <strong>Start</strong> to activate PC Bridge. Keep the service running.</li>
 <li>On Windows, choose <strong>Find phone</strong>, enter the <strong>Security Token</strong> displayed on Android if requested, and approve the computer on your phone.</li>
 <li>Use <strong>Send to phone</strong> or <strong>Receive from phone</strong>. Follow the progress and completion status.</li></ol>
 <p class="note">You do not need Windows Companion for browser-based PC Bridge transfers. Browser mode remains an alternative without installing desktop software.</p>
+</section>
+<section id="first-connection" class="panel" aria-labelledby="first-connection-heading">
+<div class="eyebrow">First connection · Android + Windows</div>
+<h2 id="first-connection-heading">Can't find “PC Bridge” on your phone? Look for “PC Connect”.</h2>
+<p>In the Android app the connection feature is called <strong>PC Connect</strong>. <strong>PC Bridge</strong> is the local transfer service that you start inside that screen. This is different from the QR-based Android-to-Android Send / Receive feature.</p>
+<div class="grid">
+<div class="card"><h3>1 · On your Android phone</h3>
+<p>Update Ultimatum from Google Play. Open the app and find <strong>PC Connect</strong> on the app's main interface (scroll if necessary). Open that screen, then press <strong>Start</strong> / <strong>Start PC Bridge</strong> to enable the local service. It should show an address, port or connection link, and a security token.</p></div>
+<div class="card"><h3>2 · On Windows</h3>
+<p>Launch <strong>Ultimatum Windows Companion</strong>. Connect the PC and phone to the same trusted local network. Choose <strong>Find phone</strong>. If your phone appears, select it. Otherwise use the manual address / copied-link option and the details displayed on the Android screen.</p></div>
+<div class="card"><h3>3 · Approve the computer</h3>
+<p>In Windows Companion enter the <strong>Security Token</strong> if requested and choose <strong>Connect / Approve on phone</strong>. Return to Android and approve the computer in the <strong>pending computer / approval</strong> prompt. The desktop should then report <strong>Connected</strong>.</p></div>
+<div class="card"><h3>4 · Transfer a small file</h3>
+<p>Select a small test photo in Windows Companion and use <strong>Send to phone</strong>, or select a phone file in <strong>Receive from phone</strong> to save it to Windows. Confirm completion before transferring larger files.</p></div>
+</div>
+<p class="note"><strong>Important:</strong> Windows Companion does <em>not</em> yet provide a PC-screen QR pairing code to scan with your phone. QR pairing between Android phones is a different feature. We are evaluating a dedicated PC-to-phone QR connection flow. Until released, use Find phone or the manual connection fallback.</p>
+<p class="small"><strong>Need a screenshot-based walkthrough?</strong> If the PC Connect option is missing, please email support with the Android app version and a screenshot of its main screen. Hide any security token or connection link before sending. We can then point to the exact entry on your installed version.</p>
 </section>
 <section id="features"><div class="eyebrow">What you can do</div><h2>Send, receive and organize</h2>
 <div class="cards">
@@ -55,7 +81,7 @@ a{color:var(--cyan)}.wrap{width:min(1080px,92%);margin:auto;padding:24px 0 58px}
 <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
 </section>
 <section id="help" class="panel"><div class="eyebrow">Support</div><h2>Quick troubleshooting</h2>
-<details><summary>Windows cannot find the phone</summary><p>Start PC Bridge, use the same trusted LAN, and retry Find phone. You can enter the address displayed on Android if automatic discovery fails.</p></details>
+<details><summary>Windows cannot find the phone</summary><p>On Android look for <strong>PC Connect</strong> (the screen name), start PC Bridge inside it, and keep the phone and PC on the same trusted local network. Retry Find phone. If discovery fails, use the full local connection address and token shown on the Android screen.</p></details>
 <details><summary>Connection approved, but no files transfer</summary><p>Check that both apps are current, PC Bridge is running, and the computer is still approved. Reconnect and retry with a small test file.</p></details>
 <details><summary>A transferred file is missing</summary><p>Check transfer activity and the corresponding Send or Receive list. On Android, saved files and PC Bridge's private received-file area may be different locations.</p></details>
 <details><summary>Why can't I download the installer?</summary><p>The download activates only after a public GitHub Release includes the exact installer and GitHub reports its matching SHA-256 digest. Until then, the software is in local testing.</p></details>
