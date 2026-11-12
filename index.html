@@ -128,6 +128,28 @@ h1,h2,h3,p{margin-top:0}
 .testing-section .upcoming-grid .upcoming-icon{display:grid;place-items:center;flex:0 0 86px;font-size:1.45rem;font-weight:900;letter-spacing:-.06em;color:#dffaff;background:radial-gradient(circle at 25% 15%,rgba(105,232,255,.42),transparent 72%),linear-gradient(135deg,#153d65,#26214e);border:1px solid rgba(130,227,255,.5);box-shadow:0 10px 26px rgba(33,130,201,.18)}
 @media(max-width:920px){.upcoming-grid{grid-template-columns:1fr}}
 @media(max-width:560px){.testing-section .upcoming-grid .upcoming-icon{flex-basis:67px}}
+
+/* QFS EDITORIAL FOOTER V2: mirrored across official sites. */
+.site-footer{position:relative;margin-top:70px;isolation:isolate;border-top:1px solid rgba(149,185,229,.25);background:radial-gradient(ellipse 48% 110% at 50% -20%,rgba(70,216,250,.10),transparent 76%),linear-gradient(180deg,rgba(14,25,49,.42),rgba(6,12,26,.98))}
+.site-footer:before{content:"";position:absolute;top:-1px;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,#67e3fb 46%,#a69af8 64%,transparent);opacity:.68;pointer-events:none}
+.qfs-footer-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,1.35fr) minmax(0,1fr);align-items:center;gap:24px;padding:42px 0 30px}
+.qfs-footer-brand{display:flex;align-items:center;gap:11px;margin:0 0 10px;color:#ecf5ff;font-size:1.01rem;font-weight:850;letter-spacing:-.02em}
+.qfs-footer-logo{display:grid;place-items:center;width:39px;height:39px;flex:none;border-radius:13px;background:linear-gradient(135deg,rgba(86,223,246,.24),rgba(135,109,251,.17));color:#89efff;border:1px solid rgba(130,205,241,.26);font-weight:900;font-size:.87rem;letter-spacing:.02em}
+.qfs-footer-copy{font-size:.79rem!important;color:#a9bad3!important;line-height:1.75}
+.qfs-footer-center{text-align:center;min-width:0}
+.qfs-footer-center h2{font-size:.82rem!important;font-weight:850;text-transform:uppercase;letter-spacing:.17em;margin:0 0 15px;color:#d4edff}
+.qfs-social-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.qfs-social-pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 12px;min-height:45px;border:1px solid rgba(155,195,228,.25);background:rgba(25,40,65,.74);border-radius:12px;color:#d8e8f9;box-shadow:inset 0 1px rgba(255,255,255,.07);font-size:.76rem;font-weight:730}
+.qfs-social-pill svg{display:block;width:21px;height:21px;flex:none;color:var(--social-color,#addef4)}
+.qfs-footer-social-hub{display:inline-flex;align-items:center;gap:6px;margin-top:13px;color:#8eeaf4;font-size:.77rem;font-weight:750;text-decoration:none!important;transition:color .2s}
+.qfs-footer-social-hub:hover,.qfs-footer-social-hub:focus-visible{color:#fff}
+.qfs-footer-right{display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.qfs-footer-right a{color:#bdd3e9;font-size:.81rem;font-weight:620;text-decoration:none;transition:color .2s}
+.qfs-footer-right a:hover,.qfs-footer-right a:focus-visible{color:#90eaff}
+.qfs-footer-lower{border-top:1px solid rgba(152,185,220,.11);padding:16px 0 25px;text-align:center;font-size:.72rem;color:#788ca9}
+@media(max-width:960px){.qfs-footer-grid{grid-template-columns:1fr;gap:25px;text-align:center;padding:35px 0 25px}.qfs-footer-brand{justify-content:center}.qfs-footer-right{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;gap:17px}.qfs-footer-lower{padding-bottom:26px}}
+@media(max-width:440px){.qfs-social-row{gap:7px}.qfs-social-pill{padding:8px 9px;font-size:.73rem}.qfs-footer-center h2{letter-spacing:.12em}}
+
 </style>
 </head>
 <body>
@@ -303,6 +325,29 @@ h1,h2,h3,p{margin-top:0}
  <div class="info-actions"><a href="mailto:flirtyquiz.contact@gmail.com">Email support ↗</a><a href="app-ads.txt">app-ads.txt ↗</a></div>
 </section>
 </main>
-<footer class="site-footer"><div class="container footer-inner"><p>© 2026 Quiz Fans Studio · Iancu Laurentiu · Romania</p><div class="footer-links"><a href="#apps">All apps</a><a href="#legal">Privacy &amp; support</a><a href="mailto:flirtyquiz.contact@gmail.com">Contact</a></div></div></footer>
+<footer class="site-footer" aria-label="Quiz Fans Studio footer">
+ <div class="container qfs-footer-grid">
+  <div class="qfs-footer-left">
+   <div class="qfs-footer-brand"><span class="qfs-footer-logo" aria-hidden="true">QFS</span><span>Quiz Fans Studio</span></div>
+   <p class="qfs-footer-copy">© 2026 Quiz Fans Studio · România<br>Apps, games &amp; creative experiences.</p>
+  </div>
+  <div class="qfs-footer-center" aria-label="Canalele sociale Quiz Fans Studio">
+   <h2>Ne găsești pe</h2>
+   <div class="qfs-social-row">
+    <span class="qfs-social-pill" style="--social-color:#ff7373" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="5" fill="currentColor"/><path d="m10 9 5 3-5 3z" fill="#14213a"/></svg><span>YouTube</span></span>
+    <span class="qfs-social-pill" style="--social-color:#f8a3cb" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.7" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></span>
+    <span class="qfs-social-pill" style="--social-color:#7aebdf" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.8a4.6 4.6 0 1 1-4.6-4.6"/><path d="M14 4c1 2.3 3.2 3.8 5.6 3.9"/></svg><span>TikTok</span></span>
+    <span class="qfs-social-pill" style="--social-color:#7bb7ff" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14.8 22v-8.4h2.8l.43-3.38H14.8V8.1c0-.98.28-1.65 1.67-1.65H18V3.46A20 20 0 0 0 15.68 3C13.25 3 11.6 4.5 11.6 7.24v2.98H9v3.38h2.6V22z"/></svg><span>Facebook</span></span>
+   </div>
+   <a class="qfs-footer-social-hub" href="https://linktr.ee/quizfans.studio" target="_blank" rel="noopener noreferrer" aria-label="Explorează hubul social Quiz Fans Studio pe Linktree">Descoperă canalele noastre <span aria-hidden="true">↗</span></a>
+  </div>
+  <nav class="qfs-footer-right" aria-label="Linkuri utile">
+   <a href="#apps">Toate aplicațiile</a>
+   <a href="#legal">Confidențialitate și suport</a>
+   <a href="mailto:flirtyquiz.contact@gmail.com">Contact</a>
+  </nav>
+ </div>
+ <div class="container qfs-footer-lower">© 2026 · Designed for a better everyday experience.</div>
+</footer>
 </body>
 </html>
