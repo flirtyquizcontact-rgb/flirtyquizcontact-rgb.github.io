@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
-<meta name="description" content="Official Ultimatum Windows Companion download, PC pairing guide, send and receive features, security notes and troubleshooting.">
+<meta name="description" content="Official Ultimatum Windows Companion for Android: QR pairing, easy PC connection, local Wi-Fi file transfers, video preview, Word DOCX, PDF and setup guide.">
 <link rel="canonical" href="https://flirtyquizcontact-rgb.github.io/UltimatumShare/windows.html">
-<title>Ultimatum Windows Companion | Download &amp; Setup</title>
+<title>Ultimatum Windows Companion | QR Pairing, Transfer &amp; Preview</title>
 <style>
 :root{color-scheme:dark;--bg:#070b18;--bg2:#0f1930;--panel:#13213a;--stroke:#324768;--text:#f1f6ff;--muted:#b9cbdf;--cyan:#58dafa;--mint:#72ecc1;--gold:#f9d08a}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 60% 40% at 12% 0%,#172f50 0%,transparent 100%),radial-gradient(ellipse 55% 40% at 100% 25%,#251a49 0%,transparent 100%),var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
@@ -22,101 +22,150 @@ a{color:var(--cyan)}.wrap{width:min(1080px,92%);margin:auto;padding:24px 0 58px}
 #first-connection .card p{color:#c2d4e6}
 #first-connection .note{margin:22px 0 13px;color:#ffecbf}
 
+
+/* Ultimatum QR One-Scan guide - accessible, responsive, lightweight. */
+.hero{padding-top:56px}.hero h1{max-width:880px}.eyebrow{letter-spacing:.11em}
+.qr-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0}
+.qr-step{background:linear-gradient(160deg,#18314a,#0b172b);border:1px solid #34536c;border-radius:17px;padding:20px 17px;min-width:0}
+.qr-step-top{display:flex;align-items:center;justify-content:space-between;margin:0 0 19px}
+.qr-number{display:inline-grid;place-items:center;border:1px solid #3f9f7e;border-radius:12px;background:#164235;color:#aaf4cd;font-size:14px;font-weight:850;width:42px;height:42px}
+.qr-step-symbol{font-size:29px;line-height:1;color:#87e6ce}
+.qr-step h3{font-size:16px;color:#fff;margin:0 0 11px}
+.qr-step p{font-size:13px;line-height:1.6;color:#bdd0e4;margin:0}
+.qr-step strong{color:#e0fff0}
+.preview-panel{border-color:#2c6b78}
+.preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0}
+.preview-grid>div{display:grid;grid-template-columns:35px 1fr;column-gap:10px;align-content:start;background:#11253a;border:1px solid #304b64;border-radius:14px;padding:17px}
+.preview-grid .preview-icon{grid-row:1/3;display:grid;place-items:center;width:33px;height:33px;background:#163d43;border-radius:10px;color:#9df2d7;font-size:20px}
+.preview-grid strong{font-size:14px}.preview-grid p{grid-column:2;margin:5px 0 0;font-size:13px}
+#first-connection{border-color:#3982a3}#first-connection .grid{margin:17px 0}#first-connection .card{min-width:0}
+#download-link{background:#7cf4b0;border-color:#7cf4b0;color:#082116}
+.btn:focus-visible,.nav a:focus-visible,details summary:focus-visible{outline:3px solid #a2ffcf;outline-offset:3px}
+@media(max-width:960px){.qr-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.qr-steps,.preview-grid{grid-template-columns:1fr}.qr-step{padding:19px}.hero{padding-top:34px}}
+
 </style>
 </head>
 <body><div class="wrap">
-<header class="top"><a class="brand" href="./">ULTIMATUM · Windows Companion</a><nav class="nav" aria-label="Navigation"><a href="./">App home</a><a href="#setup">Setup</a><a href="#features">Features</a><a href="#help">Help</a></nav></header>
+<header class="top"><a class="brand" href="./">ULTIMATUM · Windows Companion</a><nav class="nav" aria-label="Navigation"><a href="./">App home</a><a href="#setup">QR setup</a><a href="#features">Previews</a><a href="#help">Help</a></nav></header>
 <main>
-<section class="hero"><div class="eyebrow">Official Windows Companion</div><h1>Ultimatum <span>for Windows.</span></h1>
-<p class="lead">Connect your Windows PC to Ultimatum PC Bridge on Android. Send files to your phone, preview files offered by Android, and save individual or multiple items from one desktop workspace.</p>
-<div class="tags"><span>Windows desktop · x64</span><span>Same local network</span><span>Phone approval</span><span>SHA-256 transfer verification</span><span>Basic transfers free</span></div></section>
+<section class="hero"><div class="eyebrow">Android to Windows - one-scan local pairing</div><h1>Send files with <span>a simple QR scan.</span></h1>
+<p class="lead">Ultimatum Windows Companion pairs with your Android phone using a temporary QR code and an explicit phone approval. Send and receive files over your local Wi-Fi network, preview supported photos, documents and video, then save them on your PC.</p>
+<div class="tags"><span>Windows desktop · x64</span><span>Pair by QR - Easy</span><span>Phone approval</span><span>Rich file previews</span><span>Local network transfers</span></div></section>
 <section class="panel download" id="download" aria-labelledby="download-title">
 <h2 id="download-title">Download Windows Companion</h2>
-<p id="release-description">The desktop installer has passed local build and device tests. The official public release is pending publication and verification.</p>
-<div id="release-status" class="status" role="status" aria-live="polite">Public installer not available yet</div>
-<a id="download-link" class="btn" href="#" hidden rel="noopener noreferrer">Download for Windows (x64)</a>
+<p id="release-description">Checking the latest public GitHub Release and SHA-256 installer digest. The latest version includes PC QR pairing and rich previews.</p>
+<div id="release-status" class="status" role="status" aria-live="polite">Verifying official download...</div>
+<a id="download-link" class="btn" href="#" hidden target="_blank" rel="noopener noreferrer">Download for Windows (x64)</a>
 <a class="btn secondary" href="https://github.com/QuizFansStudio/ultimatum-flash/releases" rel="noopener noreferrer">Official GitHub Releases</a>
-<div id="release-details" class="meta">Installer: UltimatumCompanionSetup.exe · Official SHA-256 will appear once the release asset is verified.</div>
-<p class="small">A publicly uploaded installer must match the verified SHA-256 before this page enables the download button. An unsigned Windows build may trigger an unknown-publisher or SmartScreen warning. Do not disable security protections to install untrusted software.</p>
+<div id="release-details" class="meta">Installer: UltimatumCompanionSetup.exe | SHA-256 verified against official GitHub Release metadata.</div>
+<p class="small">Download buttons activate only for GitHub assets matching the release SHA-256. The Windows installer is not Authenticode-signed and can show an unknown publisher warning. Do not disable security protections to install untrusted software.</p>
 </section>
-<section id="setup" class="panel"><div class="eyebrow">Getting started</div><h2>Connect in six steps</h2>
-<ol><li>Install or update <a href="https://play.google.com/store/apps/details?id=com.ultimatum.flashshare">Ultimatum on Android</a>.</li>
-<li>When available, download Windows Companion from the verified official release above and install it.</li>
-<li>Connect the phone and PC to the same trusted local network (a wired PC and Wi-Fi phone can work on the same LAN).</li>
-<li>On Android, find <strong>PC Connect</strong>, open it, and choose <strong>Start</strong> to activate PC Bridge. Keep the service running.</li>
-<li>On Windows, choose <strong>Find phone</strong>, enter the <strong>Security Token</strong> displayed on Android if requested, and approve the computer on your phone.</li>
-<li>Use <strong>Send to phone</strong> or <strong>Receive from phone</strong>. Follow the progress and completion status.</li></ol>
-<p class="note">You do not need Windows Companion for browser-based PC Bridge transfers. Browser mode remains an alternative without installing desktop software.</p>
+<section id="setup" class="panel">
+<div class="eyebrow">Easy connection - QR pairing</div>
+<h2>Connect Windows and Android in four easy steps</h2>
+<p>You do not need to type an IP address, port or security token when using QR pairing. Use <strong>Ultimatum Android 2.0.16 or newer</strong> with the QR-enabled Windows Companion. Both devices must be on the same trusted local network.</p>
+<div class="qr-steps" aria-label="QR pairing instructions">
+ <article class="qr-step"><div class="qr-step-top"><span class="qr-number">01</span><span class="qr-step-symbol" aria-hidden="true">▣</span></div><h3>Open Companion on Windows</h3><p>Launch Ultimatum Windows Companion. Select <strong>Pair by QR - Easy</strong> to display a temporary pairing code on your PC.</p></article>
+ <article class="qr-step"><div class="qr-step-top"><span class="qr-number">02</span><span class="qr-step-symbol" aria-hidden="true">▦</span></div><h3>Scan using your phone</h3><p>In Ultimatum for Android, choose the green <strong>WINDOWS PC - CONNECT / SCAN QR</strong> action, then <strong>SCAN WINDOWS QR - CONNECT</strong>. Point the phone at the code on your PC screen.</p></article>
+ <article class="qr-step"><div class="qr-step-top"><span class="qr-number">03</span><span class="qr-step-symbol" aria-hidden="true">✓</span></div><h3>Approve on Android</h3><p>Look near the <strong>top of PC Connect</strong> for the incoming computer request. Tap the green <strong>APPROVE &amp; CONNECT</strong> button. Scanning alone never authorizes a PC.</p></article>
+ <article class="qr-step"><div class="qr-step-top"><span class="qr-number">04</span><span class="qr-step-symbol" aria-hidden="true">⇄</span></div><h3>Send and receive</h3><p>After Windows reports <strong>Connected</strong>, choose <strong>Send to phone</strong> or <strong>Receive from phone</strong>. Try a small file first.</p></article>
+</div>
+<p class="note"><strong>Security:</strong> The QR code is temporary and expires after approximately 2 minutes. If it expires, generate a new one on Windows. Phone approval is still required. Use only a trusted private network.</p>
 </section>
 <section id="first-connection" class="panel" aria-labelledby="first-connection-heading">
-<div class="eyebrow">First connection · Android + Windows</div>
-<h2 id="first-connection-heading">Can't find “PC Bridge” on your phone? Look for “PC Connect”.</h2>
-<p>In the Android app the connection feature is called <strong>PC Connect</strong>. <strong>PC Bridge</strong> is the local transfer service that you start inside that screen. This is different from the QR-based Android-to-Android Send / Receive feature.</p>
+<div class="eyebrow">If QR is not available</div>
+<h2 id="first-connection-heading">Find phone or connect manually</h2>
 <div class="grid">
-<div class="card"><h3>1 · On your Android phone</h3>
-<p>Update Ultimatum from Google Play. Open the app and find <strong>PC Connect</strong> on the app's main interface (scroll if necessary). Open that screen, then press <strong>Start</strong> / <strong>Start PC Bridge</strong> to enable the local service. It should show an address, port or connection link, and a security token.</p></div>
-<div class="card"><h3>2 · On Windows</h3>
-<p>Launch <strong>Ultimatum Windows Companion</strong>. Connect the PC and phone to the same trusted local network. Choose <strong>Find phone</strong>. If your phone appears, select it. Otherwise use the manual address / copied-link option and the details displayed on the Android screen.</p></div>
-<div class="card"><h3>3 · Approve the computer</h3>
-<p>In Windows Companion enter the <strong>Security Token</strong> if requested and choose <strong>Connect / Approve on phone</strong>. Return to Android and approve the computer in the <strong>pending computer / approval</strong> prompt. The desktop should then report <strong>Connected</strong>.</p></div>
-<div class="card"><h3>4 · Transfer a small file</h3>
-<p>Select a small test photo in Windows Companion and use <strong>Send to phone</strong>, or select a phone file in <strong>Receive from phone</strong> to save it to Windows. Confirm completion before transferring larger files.</p></div>
+ <div class="card"><h3>On Android - PC Connect</h3><p>Open <strong>PC Connect</strong>, not the phone-to-phone QR transfer flow. Start the PC Bridge service. If the green QR option is missing, check that the installed Android version is <strong>2.0.16 or newer</strong>.</p></div>
+ <div class="card"><h3>On Windows - Find phone</h3><p>Choose <strong>Find phone</strong> and select your Android device on the same local network. If discovery fails, choose the copied-link or manual address option and use the address and security token displayed on Android.</p></div>
 </div>
-<p class="note"><strong>Important:</strong> Windows Companion does <em>not</em> yet provide a PC-screen QR pairing code to scan with your phone. QR pairing between Android phones is a different feature. We are evaluating a dedicated PC-to-phone QR connection flow. Until released, use Find phone or the manual connection fallback.</p>
-<p class="small"><strong>Need a screenshot-based walkthrough?</strong> If the PC Connect option is missing, please email support with the Android app version and a screenshot of its main screen. Hide any security token or connection link before sending. We can then point to the exact entry on your installed version.</p>
+<p class="small">PC connected by Ethernet and phone connected by Wi-Fi can work when they share the same local network. Some guest Wi-Fi networks, client-isolation settings and firewalls prevent device discovery. Mobile hotspots may work when local device-to-device traffic is permitted.</p>
 </section>
-<section id="features"><div class="eyebrow">What you can do</div><h2>Send, receive and organize</h2>
+<section id="features"><div class="eyebrow">Transfer and preview</div><h2>Send, receive, preview and organize</h2>
 <div class="cards">
-<div class="card"><h3>Send to phone</h3><p>Select files on Windows and track the progress as Android receives and verifies them.</p></div>
-<div class="card"><h3>Receive from phone</h3><p>Browse files made available by the phone, preview supported formats, refresh the list and save selected files.</p></div>
-<div class="card"><h3>Transfer history</h3><p>See activity and direction for the current session, with results and errors when available.</p></div>
+ <div class="card"><h3>Send to phone</h3><p>Choose Windows files, send over your local network and follow transfer status.</p></div>
+ <div class="card"><h3>Receive from phone</h3><p>Browse the Android PC Bridge file list, select files to save to Windows, and preview supported types.</p></div>
+ <div class="card"><h3>Receive history</h3><p>Check the transfer direction and recent activity within the companion session.</p></div>
+</div>
+<div class="panel preview-panel"><h2>Richer file previews in Windows</h2>
+<div class="preview-grid">
+ <div><span class="preview-icon" aria-hidden="true">▧</span><strong>Images and text</strong><p>Preview supported photos and common text-based files inside Windows Companion.</p></div>
+ <div><span class="preview-icon" aria-hidden="true">▤</span><strong>Word DOCX</strong><p>Preview document text in-app. Save the file to view original layout and formatting.</p></div>
+ <div><span class="preview-icon" aria-hidden="true">▶</span><strong>Video and audio</strong><p>Use Play, Pause and Stop in the in-app media player. Playback depends on available Windows codecs.</p></div>
+ <div><span class="preview-icon" aria-hidden="true">▣</span><strong>PDF, Excel, PowerPoint</strong><p>Open in the associated Windows viewer after confirmation. These files are not rendered directly inside Companion.</p></div>
+</div>
+<p class="small">Preview size limits apply. Large or unsupported files can still be saved using <strong>Save selected</strong>. Never open files from untrusted senders.</p>
 </div>
 <div class="grid">
-<div class="panel"><h2>Free essentials</h2><p>Basic PC/Android transfers, individual saves, preview of supported formats, and connection controls.</p><p>Android storage permissions and file availability still apply.</p></div>
-<div class="panel"><h2>Optional Pro features</h2><p>Where supported and authorized by the connected Android version: bulk delete and ZIP export of selected files. Pro checks are enforced on Android, not merely hidden in the Windows interface.</p><p>Check the app for the current Pro entitlement and limits.</p></div>
+ <div class="panel"><h2>Free essentials</h2><p>QR connection, authorized local PC transfers, single-file saving, supported previews and connection controls.</p></div>
+ <div class="panel"><h2>Optional Pro features</h2><p>Eligible bulk file actions, including ZIP export and deletion where the Android app supports and authorizes them. Entitlements are enforced on Android.</p></div>
 </div></section>
 <section class="panel" aria-labelledby="privacy-title"><h2 id="privacy-title">Privacy, local access and file safety</h2>
 <p>Current PC Bridge sessions use <strong>HTTP, not HTTPS</strong>. Data and session tokens are not encrypted on the local network. Use a trusted private LAN, do not expose the PC Bridge port to the public internet, and avoid transferring confidential files over networks you do not control.</p>
 <p>PC approval and temporary tokens restrict access but are not substitutes for encrypted transport. Windows Companion can store a local pairing identifier and transfer diagnostics; received files are saved to the destination you choose.</p>
 <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
 </section>
-<section id="help" class="panel"><div class="eyebrow">Support</div><h2>Quick troubleshooting</h2>
-<details><summary>Windows cannot find the phone</summary><p>On Android look for <strong>PC Connect</strong> (the screen name), start PC Bridge inside it, and keep the phone and PC on the same trusted local network. Retry Find phone. If discovery fails, use the full local connection address and token shown on the Android screen.</p></details>
-<details><summary>Connection approved, but no files transfer</summary><p>Check that both apps are current, PC Bridge is running, and the computer is still approved. Reconnect and retry with a small test file.</p></details>
-<details><summary>A transferred file is missing</summary><p>Check transfer activity and the corresponding Send or Receive list. On Android, saved files and PC Bridge's private received-file area may be different locations.</p></details>
-<details><summary>Why can't I download the installer?</summary><p>The download activates only after a public GitHub Release includes the exact installer and GitHub reports its matching SHA-256 digest. Until then, the software is in local testing.</p></details>
-<details><summary>Windows shows an unknown publisher</summary><p>Early builds are not Authenticode-signed. Do not disable Windows security controls. Verify the official release and its SHA-256 before running an installer.</p></details>
+<section id="help" class="panel"><div class="eyebrow">Help and troubleshooting</div><h2>Need help connecting?</h2>
+<details><summary>I cannot find PC Bridge on Android</summary><p>Look for <strong>PC Connect</strong>. In Android 2.0.16 or newer, you can also use the green <strong>WINDOWS PC - CONNECT / SCAN QR</strong> option from the main interface. PC Bridge is the service inside PC Connect.</p></details>
+<details><summary>The QR scan does not connect</summary><p>Confirm both devices use the same trusted local network and are running compatible versions. Generate a fresh QR from <strong>Pair by QR - Easy</strong> if the old code has expired. Keep the Windows app open until you have approved the request on Android.</p></details>
+<details><summary>Where do I press Approve?</summary><p>After scanning, open the Android <strong>PC Connect</strong> screen and look near the <strong>top</strong> for the pending computer request. Select the green <strong>APPROVE &amp; CONNECT</strong> button or <strong>Deny</strong>. The PC remains unauthorized until you approve it.</p></details>
+<details><summary>Windows cannot discover the phone</summary><p>Use <strong>Find phone</strong> or the copied-link/manual address fallback. Check PC firewall, guest-network isolation and whether Android PC Bridge is running. A phone hotspot can work if devices may communicate locally.</p></details>
+<details><summary>Video or document preview will not open</summary><p>Video and audio depend on Windows codecs. DOCX previews text only. PDF, XLSX and PPTX open through a suitable Windows application after confirmation. Preview size limits apply. Use <strong>Save selected</strong> when preview is not supported.</p></details>
+<details><summary>Windows shows an unknown publisher</summary><p>The current Windows installer is <strong>not Authenticode-signed</strong>. Verify that you downloaded it from our official GitHub Release and compare its SHA-256. Do not disable security protections for unknown or untrusted software.</p></details>
+<details><summary>Why is the legacy installer shown?</summary><p>If the latest release is not yet verified on GitHub, the page may offer the older v1.0.0 installer explicitly labelled <strong>Legacy</strong>. That release does not include the new Windows QR pairing and rich preview. Return once the latest verified release is available.</p></details>
 <p class="small">Support: <a href="mailto:quizfans.studio@gmail.com">quizfans.studio@gmail.com</a></p></section>
 </main>
 <footer>© 2026 Quiz Fans Studio · Ultimatum Windows Companion · <a href="./">App home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></footer>
 </div>
 <script>
 (function(){
-  const expected="6CE893D2A423F0E55261F48A63D3150A0B3BFEC8ECB393E4E05260B7ADE61AD0".toLowerCase();
+  "use strict";
+  const repo="QuizFansStudio/ultimatum-flash";
   const assetName="UltimatumCompanionSetup.exe";
-  const releaseTag="windows-companion-v1.0.0";
-  const prefix="https://github.com/QuizFansStudio/ultimatum-flash/releases/download/"+releaseTag+"/"+assetName;
-  const endpoint="https://api.github.com/repos/QuizFansStudio/ultimatum-flash/releases/tags/"+releaseTag;
+  const releases=[
+    {tag:"windows-companion-v1.1.0",sha:"b9f596c13599f1d20a3c97c11a8c5156f1feb4d886d4194e91e45833cee6dc0d",latest:true},
+    {tag:"windows-companion-v1.0.0",sha:"6ce893d2a423f0e55261f48a63d3150a0b3bfec8ecb393e4e05260b7ade61ad0",latest:false}
+  ];
   const status=document.getElementById("release-status");
-  const info=document.getElementById("release-details");
+  const details=document.getElementById("release-details");
   const description=document.getElementById("release-description");
   const button=document.getElementById("download-link");
-  fetch(endpoint,{headers:{"Accept":"application/vnd.github+json"},cache:"no-store"})
-    .then(r=>{if(!r.ok)throw new Error("No verified public release");return r.json()})
-    .then(r=>{
-      if(r.draft || r.prerelease)throw new Error("Release not approved for public download");
-      const asset=(r.assets||[]).find(x=>x.name===assetName && x.state==="uploaded" && x.size>0);
-      if(!asset)throw new Error("Installer asset not yet published");
-      if(String(asset.digest||"").toLowerCase()!=="sha256:"+expected)throw new Error("Installer digest mismatch or unavailable");
-      if(asset.browser_download_url!==prefix)throw new Error("Unexpected installer URL");
-      button.href=asset.browser_download_url;
-      button.hidden=false;
-      status.classList.add("ready");
-      status.textContent="Installer available · "+releaseTag;
-      description.textContent="The official Windows installer is available from the verified GitHub release.";
-      info.textContent=assetName+" · "+(asset.size/1048576).toFixed(1)+" MiB · SHA-256: "+expected.toUpperCase();
-    })
-    .catch(()=>{status.textContent="Public installer not available yet · verified release pending"});
+  async function verifiedAsset(release){
+    const endpoint="https://api.github.com/repos/"+repo+"/releases/tags/"+release.tag;
+    const response=await fetch(endpoint,{headers:{"Accept":"application/vnd.github+json"},cache:"no-store"});
+    if(!response.ok)throw new Error("Release unavailable");
+    const data=await response.json();
+    if(data.draft||data.prerelease||data.tag_name!==release.tag)throw new Error("Not public or incorrect tag");
+    const asset=(data.assets||[]).find(x=>x.name===assetName&&x.state==="uploaded"&&x.size>0);
+    if(!asset)throw new Error("Installer not published");
+    if(String(asset.digest||"").toLowerCase()!=="sha256:"+release.sha)throw new Error("Installer digest mismatch");
+    const direct="https://github.com/"+repo+"/releases/download/"+release.tag+"/"+assetName;
+    if(asset.browser_download_url!==direct)throw new Error("Unexpected download address");
+    return asset;
+  }
+  async function load(){
+    for(const release of releases){
+      try{
+        const asset=await verifiedAsset(release);
+        button.href=asset.browser_download_url;
+        button.hidden=false;
+        button.textContent=release.latest?"Download latest Windows Companion (x64)":"Download legacy v1.0.0 (no PC QR)";
+        status.classList.toggle("ready",release.latest);
+        status.textContent=release.latest?"Latest QR + Rich Preview installer verified":"Legacy v1.0.0 available - new QR installer pending";
+        description.textContent=release.latest
+          ?"Latest Windows Companion includes Pair by QR - Easy and richer document and media previews. Compatible Android 2.0.16 or newer is needed for QR pairing."
+          :"The newest QR-enabled installer is not yet verified on GitHub. This older installer supports manual and Find phone connections, but not PC-screen QR pairing or rich previews.";
+        details.textContent=assetName+" | "+(asset.size/1048576).toFixed(1)+" MiB | SHA-256: "+release.sha.toUpperCase()+" | "+release.tag;
+        return;
+      }catch(e){/* Safely check the next known, versioned release. */}
+    }
+    button.hidden=true;
+    status.textContent="No verified installer currently available";
+    description.textContent="Please use Official GitHub Releases and check back for a verified installer.";
+    details.textContent="Downloads appear only after public asset digest verification.";
+  }
+  load();
 })();
 </script>
 </body></html>
